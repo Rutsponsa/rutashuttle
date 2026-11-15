@@ -1,0 +1,292 @@
+{
+  "en": {
+    "slugs": {
+      "about": "about",
+      "contact": "contact",
+      "privacy": "privacy",
+      "terms": "terms"
+    },
+    "labels": {
+      "about": "About us",
+      "contact": "Contact",
+      "privacy": "Privacy policy",
+      "terms": "Terms of service",
+      "company": "Company"
+    },
+    "about": {
+      "title": "About Ruta Shuttle | Private Tourist Transport in Ecuador",
+      "desc": "Ruta Shuttle is the trade name of Ruta del Spondylus Rutsponsa S.A., a tourist transport company founded in 2017 in Puerto López, Ecuador.",
+      "h1": "About Ruta Shuttle",
+      "factsH2": "Company details",
+      "facts": [
+        [
+          "Trade name",
+          "Ruta Shuttle"
+        ],
+        [
+          "Legal name",
+          "Ruta del Spondylus Rutsponsa S.A."
+        ],
+        [
+          "RUC (tax ID)",
+          "1391854234001"
+        ],
+        [
+          "Founded",
+          "June 2017, Puerto López, Manabí"
+        ],
+        [
+          "Registered office",
+          "{address}"
+        ],
+        [
+          "Service area",
+          "All of Ecuador, with pickups in Quito, Cuenca and Guayaquil"
+        ],
+        [
+          "Languages",
+          "English and Spanish"
+        ]
+      ]
+    },
+    "contact": {
+      "title": "Contact Ruta Shuttle | WhatsApp, Email and Booking Help",
+      "desc": "Contact Ruta Shuttle on WhatsApp or by email for private transfers in Ecuador. We answer in English and Spanish.",
+      "h1": "Contact Ruta Shuttle",
+      "lede": "Write to us on WhatsApp for the fastest answer, call us, or send the form and we'll reply by email. We answer in English and Spanish.",
+      "wa": "WhatsApp",
+      "email": "Email",
+      "office": "Registered office",
+      "social": "Instagram",
+      "phone": "Phone",
+      "waChat": "Chat on WhatsApp",
+      "mapH2": "Based in Puerto López, on the road all over Ecuador",
+      "mapP": "Our registered office is in Puerto López, on the Manabí coast, but we work across the whole country. We have vehicles based in Ecuador's main cities and a national tourist transport permit, so we can pick you up and take you wherever your trip goes.",
+      "mapBtn": "Open in Google Maps",
+      "mapTitle": "Ruta Shuttle on Google Maps",
+      "reviews": "Reviews",
+      "taLink": "See us on Tripadvisor"
+    },
+    "privacy": {
+      "title": "Privacy Policy | Ruta Shuttle",
+      "desc": "How Ruta Shuttle collects and uses the personal data you share when you contact us or book a private transfer in Ecuador.",
+      "h1": "Privacy policy",
+      "updated": "Last updated: November 2026",
+      "sections": [
+        [
+          "Who we are",
+          "This website is run by Ruta del Spondylus Rutsponsa S.A. (trade name Ruta Shuttle), RUC 1391854234001, with registered office at {address}. We are responsible for the personal data you share with us through this site, in line with Ecuador's Organic Law on Personal Data Protection."
+        ],
+        [
+          "What we collect",
+          "When you use the contact form we receive your name, email, phone or WhatsApp number, travel date and the trip details you write. When you book, WeTravel collects your booking and payment details and shares with us what we need to run the ride: names, number of passengers, pickup address, flight details and contact information. When you write to us on WhatsApp we see your number and your messages."
+        ],
+        [
+          "Why we use it",
+          "We use your data only to answer your questions, quote and run your transfer, coordinate pickup with your driver, and send you updates about your booking. We do not sell your data and we do not send marketing messages unless you ask for them."
+        ],
+        [
+          "Who else handles it",
+          "We use trusted providers to run the site and the bookings: Hostinger (web hosting), Web3Forms (contact form delivery), WeTravel (bookings and card payments), WhatsApp (messaging), Google Fonts (typefaces) and Google Maps (the map on our contact page). Each one handles data under its own privacy policy. Your driver receives only the details needed for the ride."
+        ],
+        [
+          "Cookies",
+          "This site does not use advertising or analytics cookies. The WeTravel booking calendar may set its own cookies when you open it to make a booking."
+        ],
+        [
+          "How long we keep it",
+          "We keep booking and contact records for as long as we need them to provide the service and to meet accounting and tax obligations in Ecuador. After that we delete them."
+        ],
+        [
+          "Your rights",
+          "You can ask us to access, correct, update or delete your personal data, or to stop using it, by writing to {email}. We will answer within the time limits set by Ecuadorian law."
+        ]
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service | Ruta Shuttle",
+      "desc": "Booking, payment, cancellation and travel conditions for Ruta Shuttle private transfers in Ecuador.",
+      "h1": "Terms of service",
+      "updated": "Last updated: November 2026",
+      "sections": [
+        [
+          "The service",
+          "Ruta Shuttle, the trade name of Ruta del Spondylus Rutsponsa S.A. (RUC 1391854234001), provides private tourist transport in Ecuador. Every ride is private: only your group travels in the vehicle."
+        ],
+        [
+          "Prices",
+          "Prices are per vehicle, in US dollars, and depend on the route and the vehicle size. Each route page shows its starting price, and the booking calendar shows the exact price before you pay."
+        ],
+        [
+          "Booking and payment",
+          "Bookings are made online through WeTravel with a major card, or arranged with our team on WhatsApp. A deposit secures the ride. You can pay the balance online up to 24 hours before pickup or in cash to your driver."
+        ],
+        [
+          "Cancellations and changes",
+          "You can cancel for free up to 24 hours before pickup. Card processing fees may not be refundable. To change the date, time or pickup address, write to us on WhatsApp as early as you can."
+        ],
+        [
+          "Pickup and delays",
+          "Please give us a correct pickup address, phone number and, for airport pickups, your flight number. We follow your flight and adjust the pickup time, with no extra charge for normal delays."
+        ],
+        [
+          "Luggage and passengers",
+          "Choose a vehicle that fits your group and luggage. If more people or bags arrive than booked, we will do our best to help, but a larger vehicle may cost more."
+        ],
+        [
+          "Things outside our control",
+          "Road closures, landslides, protests, weather or other events outside our control can delay or change a route. In those cases we will look for the safest alternative with you, or agree a new date or a refund for the part of the service not provided."
+        ],
+        [
+          "Contact",
+          "For any question about these terms, write to {email} or message us on WhatsApp. These terms are governed by the laws of Ecuador."
+        ]
+      ]
+    }
+  },
+  "es": {
+    "slugs": {
+      "about": "nosotros",
+      "contact": "contacto",
+      "privacy": "privacidad",
+      "terms": "terminos"
+    },
+    "labels": {
+      "about": "Nosotros",
+      "contact": "Contacto",
+      "privacy": "Política de privacidad",
+      "terms": "Términos del servicio",
+      "company": "Empresa"
+    },
+    "about": {
+      "title": "Sobre Ruta Shuttle | Transporte turístico privado en Ecuador",
+      "desc": "Ruta Shuttle es el nombre comercial de Ruta del Spondylus Rutsponsa S.A., empresa de transporte turístico fundada en 2017 en Puerto López, Ecuador.",
+      "h1": "Sobre Ruta Shuttle",
+      "factsH2": "Datos de la empresa",
+      "facts": [
+        [
+          "Nombre comercial",
+          "Ruta Shuttle"
+        ],
+        [
+          "Razón social",
+          "Ruta del Spondylus Rutsponsa S.A."
+        ],
+        [
+          "RUC",
+          "1391854234001"
+        ],
+        [
+          "Fundación",
+          "Junio de 2017, Puerto López, Manabí"
+        ],
+        [
+          "Domicilio",
+          "{address}"
+        ],
+        [
+          "Cobertura",
+          "Todo el Ecuador, con recogidas en Quito, Cuenca y Guayaquil"
+        ],
+        [
+          "Idiomas",
+          "Inglés y español"
+        ]
+      ]
+    },
+    "contact": {
+      "title": "Contacto Ruta Shuttle | WhatsApp, correo y ayuda con reservas",
+      "desc": "Escribe a Ruta Shuttle por WhatsApp o correo para traslados privados en Ecuador. Respondemos en inglés y español.",
+      "h1": "Contacto",
+      "lede": "Escríbenos por WhatsApp para la respuesta más rápida, llámanos o envía el formulario y te respondemos por correo. Atendemos en inglés y español.",
+      "wa": "WhatsApp",
+      "email": "Correo",
+      "office": "Domicilio",
+      "social": "Instagram",
+      "phone": "Teléfono",
+      "waChat": "Escríbenos por WhatsApp",
+      "mapH2": "Con sede en Puerto López, en ruta por todo el Ecuador",
+      "mapP": "Nuestro domicilio está en Puerto López, en la costa de Manabí, pero trabajamos en todo el país. Tenemos unidades en las principales ciudades del Ecuador y permiso de transporte turístico a nivel nacional, así que te recogemos y te llevamos a donde vaya tu viaje.",
+      "mapBtn": "Abrir en Google Maps",
+      "mapTitle": "Ruta Shuttle en Google Maps",
+      "reviews": "Reseñas",
+      "taLink": "Míranos en Tripadvisor"
+    },
+    "privacy": {
+      "title": "Política de privacidad | Ruta Shuttle",
+      "desc": "Cómo Ruta Shuttle recoge y usa los datos personales que compartes al contactarnos o reservar un traslado privado en Ecuador.",
+      "h1": "Política de privacidad",
+      "updated": "Última actualización: noviembre de 2026",
+      "sections": [
+        [
+          "Quiénes somos",
+          "Este sitio lo opera Ruta del Spondylus Rutsponsa S.A. (nombre comercial Ruta Shuttle), RUC 1391854234001, con domicilio en {address}. Somos responsables de los datos personales que compartes con nosotros en este sitio, conforme a la Ley Orgánica de Protección de Datos Personales del Ecuador."
+        ],
+        [
+          "Qué datos recogemos",
+          "Cuando usas el formulario de contacto recibimos tu nombre, correo, teléfono o WhatsApp, fecha de viaje y los detalles que escribas. Cuando reservas, WeTravel recoge los datos de la reserva y del pago, y nos comparte lo necesario para el traslado: nombres, número de pasajeros, dirección de recogida, datos del vuelo y contacto. Cuando nos escribes por WhatsApp vemos tu número y tus mensajes."
+        ],
+        [
+          "Para qué los usamos",
+          "Usamos tus datos solo para responder tus preguntas, cotizar y realizar tu traslado, coordinar la recogida con tu chofer y enviarte novedades de tu reserva. No vendemos tus datos ni enviamos publicidad, salvo que tú lo pidas."
+        ],
+        [
+          "Quién más los maneja",
+          "Usamos proveedores de confianza para operar el sitio y las reservas: Hostinger (alojamiento web), Web3Forms (envío del formulario), WeTravel (reservas y pagos con tarjeta), WhatsApp (mensajería), Google Fonts (tipografías) y Google Maps (el mapa de la página de contacto). Cada uno trata los datos según su propia política de privacidad. Tu chofer recibe solo lo necesario para el viaje."
+        ],
+        [
+          "Cookies",
+          "Este sitio no usa cookies de publicidad ni de analítica. El calendario de reservas de WeTravel puede usar sus propias cookies cuando lo abres para reservar."
+        ],
+        [
+          "Cuánto tiempo los guardamos",
+          "Guardamos los registros de reservas y contactos mientras los necesitamos para prestar el servicio y cumplir las obligaciones contables y tributarias del Ecuador. Después los eliminamos."
+        ],
+        [
+          "Tus derechos",
+          "Puedes pedirnos acceder, rectificar, actualizar o eliminar tus datos personales, u oponerte a su uso, escribiendo a {email}. Respondemos dentro de los plazos que fija la ley ecuatoriana."
+        ]
+      ]
+    },
+    "terms": {
+      "title": "Términos del servicio | Ruta Shuttle",
+      "desc": "Condiciones de reserva, pago, cancelación y viaje de los traslados privados de Ruta Shuttle en Ecuador.",
+      "h1": "Términos del servicio",
+      "updated": "Última actualización: noviembre de 2026",
+      "sections": [
+        [
+          "El servicio",
+          "Ruta Shuttle, nombre comercial de Ruta del Spondylus Rutsponsa S.A. (RUC 1391854234001), ofrece transporte turístico privado en Ecuador. Todos los traslados son privados: solo tu grupo viaja en el vehículo."
+        ],
+        [
+          "Precios",
+          "Los precios son por vehículo, en dólares, y dependen de la ruta y del tamaño del vehículo. Cada ruta muestra su precio desde, y el calendario de reserva muestra el precio exacto antes de pagar."
+        ],
+        [
+          "Reserva y pago",
+          "Las reservas se hacen en línea por WeTravel con tarjeta, o se coordinan con nuestro equipo por WhatsApp. Un depósito asegura el traslado. El saldo puedes pagarlo en línea hasta 24 horas antes o en efectivo al chofer."
+        ],
+        [
+          "Cancelaciones y cambios",
+          "Puedes cancelar gratis hasta 24 horas antes de la recogida. Las comisiones de la tarjeta pueden no ser reembolsables. Para cambiar fecha, hora o dirección de recogida, escríbenos por WhatsApp lo antes posible."
+        ],
+        [
+          "Recogida y retrasos",
+          "Danos una dirección de recogida, un teléfono y, en traslados del aeropuerto, tu número de vuelo correctos. Seguimos tu vuelo y ajustamos la hora de recogida, sin costo extra por retrasos normales."
+        ],
+        [
+          "Equipaje y pasajeros",
+          "Elige un vehículo adecuado para tu grupo y tu equipaje. Si llegan más personas o maletas de las reservadas, haremos lo posible por ayudarte, pero un vehículo más grande puede tener otro precio."
+        ],
+        [
+          "Situaciones fuera de nuestro control",
+          "Cierres de vías, deslaves, paros, clima u otros hechos fuera de nuestro control pueden retrasar o cambiar una ruta. En esos casos buscamos contigo la alternativa más segura, o acordamos una nueva fecha o el reembolso de la parte del servicio no prestada."
+        ],
+        [
+          "Contacto",
+          "Para cualquier duda sobre estos términos, escribe a {email} o por WhatsApp. Estos términos se rigen por las leyes del Ecuador."
+        ]
+      ]
+    }
+  }
+}

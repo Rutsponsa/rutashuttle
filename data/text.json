@@ -166,7 +166,8 @@
       "date": "Travel date",
       "trip": "Your trip",
       "tripPh": "From where to where, how many people, any stops you want…",
-      "send": "Send message"
+      "send": "Send message",
+      "phoneLabel": "Phone"
     },
     "footer": {
       "logoAlt": "Ruta Shuttle, tourist transport company",
@@ -180,7 +181,8 @@
       "pinAria": "Chat with us on WhatsApp",
       "address": "Registered office",
       "follow": "Follow us on Instagram",
-      "ruc": "RUC"
+      "ruc": "RUC",
+      "ta": "Tripadvisor"
     },
     "dialog": {
       "eyebrow": "Book your transfer",
@@ -523,7 +525,8 @@
       "date": "Fecha de viaje",
       "trip": "Tu viaje",
       "tripPh": "Desde dónde hasta dónde, cuántas personas, paradas que quieras…",
-      "send": "Enviar mensaje"
+      "send": "Enviar mensaje",
+      "phoneLabel": "Teléfono"
     },
     "footer": {
       "logoAlt": "Ruta Shuttle, compañía de transporte turístico",
@@ -537,7 +540,8 @@
       "pinAria": "Escríbenos por WhatsApp",
       "address": "Domicilio",
       "follow": "Síguenos en Instagram",
-      "ruc": "RUC"
+      "ruc": "RUC",
+      "ta": "Tripadvisor"
     },
     "dialog": {
       "eyebrow": "Reserva tu traslado",

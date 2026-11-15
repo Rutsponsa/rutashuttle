@@ -1,0 +1,2 @@
+# Spanish 404 page for everything under /es/
+ErrorDocument 404 /es/404.html

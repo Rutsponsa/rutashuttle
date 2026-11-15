@@ -388,4 +388,45 @@
 
   $$("[data-datepicker]").forEach(initDatePicker);
   $$("form.search").forEach(initSearch);
+
+  // WebMCP: lets in-browser AI agents look up routes and contact details.
+  // Only runs in browsers that support it; everyone else is unaffected.
+  try {
+    var mc = navigator.modelContext;
+    if (mc && typeof mc.registerTool === "function") {
+      var origin = location.origin;
+      var placeList = Object.keys(places).map(function (id) { return id + " (" + places[id].name + ")"; }).join(", ");
+      var routeInfo = function (r) {
+        return { title: r.title, from: places[r.from] ? places[r.from].name : r.from, to: places[r.to] ? places[r.to].name : r.to,
+          priceFromUSD: r.price, pricePer: "vehicle", duration: r.duration, url: origin + RS.urls[r.slug] };
+      };
+      var text = function (o) { return { content: [{ type: "text", text: JSON.stringify(o) }] }; };
+      mc.registerTool({
+        name: "search_private_transfers",
+        description: "Find Ruta Shuttle private transfer routes in Ecuador with starting price per vehicle (USD), duration and booking page. Leave both fields empty to list every route. Place ids: " + placeList,
+        inputSchema: { type: "object", properties: {
+          from: { type: "string", description: "Origin place id, e.g. cuenca, guayaquil-airport, quito-airport" },
+          to: { type: "string", description: "Destination place id, e.g. guayaquil, montanita, banos" } } },
+        execute: function (input) {
+          input = input || {};
+          if (input.from && input.to) {
+            var f = findRoute(input.from, input.to);
+            if (f) return text({ found: true, route: routeInfo(f.route), reverseDirection: f.reverse, note: "Routes run both ways at the same rate." });
+            return text({ found: false, note: "No fixed route. Ask for a quote on WhatsApp.", whatsapp: "https://wa.me/" + cfg.whatsapp, email: cfg.email });
+          }
+          var list = routes.filter(function (r) { return (!input.from || r.from === input.from) && (!input.to || r.to === input.to); });
+          return text({ count: list.length, routes: list.map(routeInfo) });
+        }
+      });
+      mc.registerTool({
+        name: "get_contact_details",
+        description: "Get Ruta Shuttle contact details: phone, WhatsApp, email, registered office, Google Maps, Instagram and Tripadvisor.",
+        inputSchema: { type: "object", properties: {} },
+        execute: function () {
+          return text({ company: cfg.legalName, tradeName: cfg.brand || "Ruta Shuttle", whatsapp: "https://wa.me/" + cfg.whatsapp,
+            phone: "+" + cfg.phone, email: cfg.email, office: cfg.address && cfg.address.display, instagram: cfg.instagram, tripadvisor: cfg.tripadvisor, googleMaps: cfg.maps, languages: ["en", "es"] });
+        }
+      });
+    }
+  } catch (e) { /* never break the page */ }
 })();

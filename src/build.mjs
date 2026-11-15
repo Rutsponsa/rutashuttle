@@ -47,6 +47,7 @@ const pLabel = (id, lang) => (lang === "es" ? places[id].labelEs : places[id].la
 // ---------- URLs ----------
 const ROUTE_BY_ID = { en: Object.fromEntries(routesFor("en").map((r) => [r.id, r])), es: Object.fromEntries(routesFor("es").map((r) => [r.id, r])) };
 const P = (lang) => (MODE === "preview" ? (lang === "es" ? "es-" : "") : lang === "es" ? "/es/" : "/");
+const PAGES = read("data/pages.json");
 const url = {
   home: (lang) => (MODE === "preview" ? (lang === "es" ? "es.html" : "index.html") : P(lang)),
   hub: (h, lang) => (MODE === "preview" ? `${P(lang)}${h}.html` : `${P(lang)}${h}/`),
@@ -54,6 +55,7 @@ const url = {
     const x = ROUTE_BY_ID[lang][r.id];
     return MODE === "preview" ? `${P(lang)}${x.slug}.html` : `${P(lang)}${x.hub}/${x.slug}/`;
   },
+  page: (k, lang) => (MODE === "preview" ? `${P(lang)}${PAGES[lang].slugs[k]}.html` : `${P(lang)}${PAGES[lang].slugs[k]}/`),
   anchor: (a, lang) => `${url.home(lang)}#${a}`,
   asset: (f) => (MODE === "preview" ? f : `/assets/${f}`),
 };
@@ -177,11 +179,12 @@ function BIZ(lang) {
     alternateName: "Ruta del Spondylus Rutsponsa S.A.", url: D + "/", logo: D + "/assets/logo-full.png", image: D + "/assets/og-image.jpg",
     description: TEXT[lang].home.desc, email: cfg.email, priceRange: "$$", currenciesAccepted: "USD",
     address: { "@type": "PostalAddress", streetAddress: cfg.address.street, addressLocality: cfg.address.locality, addressRegion: cfg.address.region, addressCountry: cfg.address.country },
+    geo: { "@type": "GeoCoordinates", latitude: cfg.geo.lat, longitude: cfg.geo.lng }, hasMap: cfg.maps,
     foundingDate: cfg.foundingDate, foundingLocation: { "@type": "Place", name: "Puerto López, Manabí, Ecuador" }, taxID: cfg.taxID, sameAs: cfg.sameAs,
     areaServed: [{ "@type": "Country", name: "Ecuador" }, ...["Quito", "Cuenca", "Guayaquil", "Puerto López"].map((n) => ({ "@type": "City", name: n }))],
     knowsLanguage: ["en", "es"],
   };
-  if (!cfg.whatsappPending) node.telephone = "+" + cfg.whatsapp;
+  node.telephone = "+" + cfg.phone;
   return node;
 }
 
@@ -207,8 +210,8 @@ function buildLang(lang) {
     <a href="${url.hub("cuenca", lang)}">Cuenca</a>
     <a href="${url.hub("guayaquil", lang)}">Guayaquil</a>
     <a href="${url.anchor("fleet", lang)}">${T.nav.vehicles}</a>
-    <a href="${url.anchor("about", lang)}">${T.nav.about}</a>
-    <a href="${url.anchor("contact", lang)}">${T.nav.contact}</a>
+    <a href="${url.page("about", lang)}">${T.nav.about}</a>
+    <a href="${url.page("contact", lang)}">${T.nav.contact}</a>
   </nav>
   <div class="lang-switch" role="group" aria-label="${T.langGroup}">${sw}</div>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="${T.openMenu}">${I.menu}</button>
@@ -260,17 +263,20 @@ function buildLang(lang) {
   const includedList = () => `<ul class="checks">${T.included.items.map((t) => `<li>${I.check}<span>${esc(t)}</span></li>`).join("")}</ul>`;
   const faqBlock = (items) => `<div class="faq">${items.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div>`;
 
-  function contactSection() {
+  function contactSection(top) {
     const C = T.contact;
-    return `<section class="section tint" id="contact"><div class="wrap">
-  <div class="section-head"><p class="eyebrow">${C.eyebrow}</p><h2>${C.h2}</h2><p class="lede">${C.lede}</p></div>
+    const head = top
+      ? `<div class="section-head">${top.crumbs}<h1>${esc(top.h1)}</h1><p class="lede">${top.lede}</p></div>`
+      : `<div class="section-head"><p class="eyebrow">${C.eyebrow}</p><h2>${C.h2}</h2><p class="lede">${C.lede}</p></div>`;
+    return `<section class="section tint${top ? " contact-top" : ""}" id="contact"><div class="wrap">
+  ${head}
   <div class="contact">
     <div class="contact-ways">
       <a class="btn btn-wa" href="${wa(C.waHello)}" target="_blank" rel="noopener">${I.wa}${C.chat}</a>
-      <div class="way"><span>WhatsApp</span><strong class="num">${esc(cfg.whatsappDisplay)}</strong></div>
-      <div class="way"><span>${C.email}</span><strong>${esc(cfg.email)}</strong></div>
+      <div class="way"><span>${C.phoneLabel}</span><strong class="num"><a href="tel:+${cfg.phone}">${esc(cfg.phoneDisplay)}</a></strong></div>
+      <div class="way"><span>${C.email}</span><strong><a href="mailto:${cfg.email}">${esc(cfg.email)}</a></strong></div>${top ? top.extra : ""}
     </div>
-    <form class="card-form" data-contact novalidate>
+    <form class="card-form" data-contact novalidate toolname="contact_ruta_shuttle" tooldescription="Send a message to Ruta Shuttle about a private transfer in Ecuador: name, email, phone, travel date and trip details.">
       <div class="form-row">
         <div class="field"><label for="c-name">${C.name}</label><div class="control"><input id="c-name" name="name" autocomplete="name" required></div></div>
         <div class="field"><label for="c-email">${C.email}</label><div class="control"><input id="c-email" name="email" type="email" autocomplete="email" spellcheck="false" required></div></div>
@@ -289,13 +295,15 @@ function buildLang(lang) {
 
   function footer() {
     const F = T.footer;
+    const PG = PAGES[lang];
     const top = routes.filter((r) => r.featured).slice(0, 6);
     return `<footer class="site-footer"><div class="wrap">
   <div class="foot-grid">
     <div style="display:grid;gap:12px;align-content:start"><img class="foot-logo" src="${url.asset("logo-full.png")}" alt="${F.logoAlt}" width="170" height="135"><p class="note">${F.tag}</p></div>
     <div><h4>${F.destinations}</h4><ul>${Object.keys(hubs).map((h) => `<li><a href="${url.hub(h, lang)}">${hubs[h].name}</a></li>`).join("")}</ul></div>
     <div><h4>${F.popular}</h4><ul>${top.map((r) => `<li><a href="${url.route(r, lang)}">${esc(r.title)}</a></li>`).join("")}</ul></div>
-    <div><h4>${F.contact}</h4><ul><li class="num">${esc(cfg.whatsappDisplay)}</li><li>${esc(cfg.email)}</li><li><a href="${cfg.instagram}" target="_blank" rel="noopener">${F.follow}</a></li><li class="note">${F.address}: ${esc(cfg.address.display)}</li><li><a href="${url.anchor("contact", lang)}">${F.form}</a></li></ul></div>
+    <div><h4>${F.contact}</h4><ul><li class="num"><a href="tel:+${cfg.phone}">${esc(cfg.phoneDisplay)}</a></li><li><a href="mailto:${cfg.email}">${esc(cfg.email)}</a></li><li><a href="${cfg.instagram}" target="_blank" rel="noopener">${F.follow}</a></li><li><a href="${cfg.tripadvisor}" target="_blank" rel="noopener">${F.ta}</a></li><li class="note">${F.address}: ${esc(cfg.address.display)}</li><li><a href="${url.page("contact", lang)}">${F.form}</a></li></ul></div>
+    <div><h4>${PG.labels.company}</h4><ul>${["about", "contact", "privacy", "terms"].map((x) => `<li><a href="${url.page(x, lang)}">${PG.labels[x]}</a></li>`).join("")}</ul></div>
   </div>
   <p class="legal">© ${new Date().getFullYear()} ${esc(cfg.legalName)}, ${F.ruc} ${cfg.taxID}</p>
 </div></footer>
@@ -578,6 +586,51 @@ ${fleetSection("vehicles")}
     if (lang === "en") SITEMAP.push(alts((l) => url.route(r, l)));
   }
 
+  // ----- About, contact, privacy, terms -----
+  {
+    const PG = PAGES[lang];
+    const fill = (s) => s.replace("{address}", esc(cfg.address.display)).replace("{email}", `<a href="mailto:${cfg.email}">${cfg.email}</a>`);
+    const simple = (k, inner, extraLd = []) => {
+      const X = PG[k];
+      const body = `
+<section class="section page-head"><div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="${url.home(lang)}">${T.nav.home}</a> / ${esc(X.h1)}</nav>
+  <h1>${esc(X.h1)}</h1>${X.lede ? `<p class="lede">${X.lede}</p>` : ""}${X.updated ? `<p class="note">${X.updated}</p>` : ""}
+</div></section>
+${inner}`;
+      page({ title: X.title, desc: X.desc, body, here: url.page(k, lang), alt: alts((l) => url.page(k, l)),
+        ld: [crumbs([[T.nav.home, url.home(lang)], [X.h1, url.page(k, lang)]]), ...extraLd] });
+      if (lang === "en") SITEMAP.push(alts((l) => url.page(k, l)));
+    };
+    const H = T.home, A = PG.about;
+    simple("about", `<section class="section" style="padding-top:8px"><div class="wrap grid cols-2" style="gap:40px;align-items:start">
+  <div class="prose"><p>${fmt(H.aboutP1, { legal: esc(cfg.legalName) })}</p><p>${H.aboutP2}</p></div>
+  <div><h2 style="font-size:1.25rem;margin-bottom:12px">${A.factsH2}</h2><dl class="facts-list">${A.facts.map(([d, v]) => `<div><dt>${d}</dt><dd>${fill(v)}</dd></div>`).join("")}</dl></div>
+</div></section>`, [{ "@type": "AboutPage", url: abs(url.page("about", lang)), about: { "@id": cfg.domain + "/#business" } }]);
+    const C = PG.contact;
+    {
+      const crumbsHtml = `<nav class="crumbs" aria-label="Breadcrumb"><a href="${url.home(lang)}">${T.nav.home}</a> / ${esc(C.h1)}</nav>`;
+      const extra = `
+      <div class="way-pair">
+        <div class="way"><span>${C.social}</span><strong><a href="${cfg.instagram}" target="_blank" rel="noopener">@ruta_shuttle_transporte</a></strong></div>
+        <div class="way"><span>${C.reviews}</span><strong><a href="${cfg.tripadvisor}" target="_blank" rel="noopener">${C.taLink}</a></strong></div>
+      </div>`;
+      const mapSrc = `https://maps.google.com/maps?q=${cfg.geo.lat},${cfg.geo.lng}&z=15&hl=${lang}&output=embed`;
+      const body = `${contactSection({ h1: C.h1, lede: C.lede, crumbs: crumbsHtml, extra })}
+<section class="section"><div class="wrap map-wrap">
+  <div class="map-copy"><h2>${C.mapH2}</h2><p class="lede">${C.mapP}</p><p class="addr-line">${esc(cfg.address.display)}</p>
+    <a class="btn btn-ghost" href="${cfg.maps}" target="_blank" rel="noopener">${C.mapBtn}</a></div>
+  <div class="map-frame"><iframe src="${mapSrc}" title="${esc(C.mapTitle)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div></section>`;
+      page({ title: C.title, desc: C.desc, body, here: url.page("contact", lang), alt: alts((l) => url.page("contact", l)),
+        ld: [crumbs([[T.nav.home, url.home(lang)], [C.h1, url.page("contact", lang)]]), { "@type": "ContactPage", url: abs(url.page("contact", lang)), about: { "@id": cfg.domain + "/#business" } }] });
+      if (lang === "en") SITEMAP.push(alts((l) => url.page("contact", l)));
+    }
+    for (const k of ["privacy", "terms"]) simple(k, `<section class="section" style="padding-top:8px"><div class="wrap"><div class="prose">
+  ${PG[k].sections.map(([h, p]) => `<h2 style="font-size:1.2rem;margin-top:8px">${h}</h2><p>${fill(p)}</p>`).join("\n  ")}
+</div></div></section>`);
+  }
+
   // ----- 404 -----
   {
     const E = T.e404;
@@ -637,7 +690,7 @@ if (MODE === "site") {
   fs.writeFileSync(path.join(OUT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
     all.flatMap((alt) => LANGS.map((l) => entry(alt, l))).join("\n") + `\n</urlset>\n`);
   const BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot-Extended", "Bingbot", "Googlebot"];
-  fs.writeFileSync(path.join(OUT, "robots.txt"), `# Search engines and AI assistants are welcome to read this site.\nUser-agent: *\nAllow: /\n\n` + BOTS.map((x) => `User-agent: ${x}\nAllow: /\n`).join("\n") + `\nSitemap: ${D}/sitemap.xml\n`);
+  fs.writeFileSync(path.join(OUT, "robots.txt"), `# Search engines and AI assistants are welcome to read this site.\n# Content signals: https://contentsignals.org/\nUser-agent: *\nContent-Signal: search=yes, ai-input=yes, ai-train=yes\nAllow: /\n\n` + BOTS.map((x) => `User-agent: ${x}\nAllow: /\n`).join("\n") + `\nSitemap: ${D}/sitemap.xml\n`);
   const R = routesFor("en");
   const llms = [
     "# Ruta Shuttle", "",
@@ -652,10 +705,13 @@ if (MODE === "site") {
     ...TEXT.en.fleet.items.map((v) => `- ${v.name}: ${v.pax} passengers. ${v.note}.`), "",
     "## Español",
     `- [Transportes Ecuador](${D}${url.home("es")}): versión en español del sitio.`, "",
+    "## Company",
+    ...["about", "contact", "privacy", "terms"].map((k) => `- [${PAGES.en.labels[k]}](${D}/${PAGES.en.slugs[k]}/)`), "",
     "## Contact",
-    `- Email: ${cfg.email}`, `- Registered office: ${cfg.address.display}`, `- Instagram: ${cfg.instagram}`, `- Google Business Profile: ${cfg.sameAs[1]}`, `- Contact form: ${D}/#contact`, "",
+    `- Phone: ${cfg.phoneDisplay}`, `- Email: ${cfg.email}`, `- Registered office: ${cfg.address.display}`, `- Instagram: ${cfg.instagram}`, `- Google Maps: ${cfg.maps}`, `- Tripadvisor: ${cfg.tripadvisor}`, `- Contact page: ${D}/contact/`, "",
   ].join("\n");
   fs.writeFileSync(path.join(OUT, "llms.txt"), llms);
+  fs.writeFileSync(path.join(OUT, "index.md"), llms);
   for (const f of ["sitemap.xsl", "_headers"]) fs.copyFileSync(path.join(ROOT, "src", f), path.join(OUT, f));
 }
 const per = 1 + Object.keys(hubsEn).length + routesEn.length;

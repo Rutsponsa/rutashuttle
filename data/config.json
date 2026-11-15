@@ -3,8 +3,6 @@
   "legalName": "Ruta del Spondylus Rutsponsa S.A.",
   "domain": "https://rutashuttle.com",
   "whatsapp": "593987796896",
-  "whatsappDisplay": "+593 98 779 6896",
-  "whatsappPending": true,
   "email": "info@rutashuttle.com",
   "wetravelUid": "631609",
   "wetravelColor": "33ae3f",
@@ -22,7 +20,16 @@
   },
   "sameAs": [
     "https://www.instagram.com/ruta_shuttle_transporte/",
-    "https://share.google/A0EHPP8gxKz271082"
+    "https://maps.google.com/?cid=4024852393414763935",
+    "https://www.tripadvisor.com/Attraction_Review-g635730-d25256022-Reviews-Shuttle_Ecuador-Puerto_Lopez_Manabi_Province.html"
   ],
-  "instagram": "https://www.instagram.com/ruta_shuttle_transporte/"
+  "instagram": "https://www.instagram.com/ruta_shuttle_transporte/",
+  "phone": "593980840114",
+  "phoneDisplay": "+593 98 084 0114",
+  "maps": "https://maps.google.com/?cid=4024852393414763935",
+  "geo": {
+    "lat": -1.5612504,
+    "lng": -80.8041909
+  },
+  "tripadvisor": "https://www.tripadvisor.com/Attraction_Review-g635730-d25256022-Reviews-Shuttle_Ecuador-Puerto_Lopez_Manabi_Province.html"
 }
