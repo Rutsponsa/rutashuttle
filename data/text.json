@@ -148,10 +148,6 @@
       [
         "How do I book a ride?",
         "Open your route, press Book now and pick your date, passengers and vehicle in the WeTravel calendar, where you also type your pickup address. If your route isn't listed, write to us on WhatsApp for a quote."
-      ],
-      [
-        "Who runs Ruta Shuttle?",
-        "Ruta Shuttle is the trade name of Ruta del Spondylus Rutsponsa S.A., an Ecuadorian tourist transport company founded in 2017 and registered in Puerto López, Manabí. We drive travelers across the whole country, from the coast to the Andes."
       ]
     ],
     "contact": {
@@ -167,7 +163,8 @@
       "trip": "Your trip",
       "tripPh": "From where to where, how many people, any stops you want…",
       "send": "Send message",
-      "phoneLabel": "Phone"
+      "phoneLabel": "Phone",
+      "waLabel": "WhatsApp"
     },
     "footer": {
       "logoAlt": "Ruta Shuttle, tourist transport company",
@@ -182,7 +179,9 @@
       "address": "Registered office",
       "follow": "Follow us on Instagram",
       "ruc": "RUC",
-      "ta": "Tripadvisor"
+      "ta": "Tripadvisor",
+      "phone": "Phone",
+      "wa": "WhatsApp"
     },
     "dialog": {
       "eyebrow": "Book your transfer",
@@ -215,7 +214,7 @@
     },
     "hub": {
       "title": "{kw} & Private Transfers | Ruta Shuttle",
-      "desc": "{lede} See prices and book your private transfer from {city} online.",
+      "desc": "{lede} See prices and book your {city} transfer online.",
       "eyebrow": "{city}, Ecuador",
       "routes": "Routes",
       "routesVal": "{n} from ${min}",
@@ -356,7 +355,8 @@
       "cuenca": "Blue-tiled domes of the New Cathedral in Cuenca",
       "quito": "Independence Monument in Plaza Grande, Quito's historic center",
       "guayaquil": "Malecón 2000 and its Ferris wheel on the Guayas River in Guayaquil"
-    }
+    },
+    "brandLogoAlt": "Ruta Shuttle logo"
   },
   "es": {
     "locale": "es-EC",
@@ -507,10 +507,6 @@
       [
         "¿Cómo reservo un traslado?",
         "Abre tu ruta, pulsa Reservar y elige fecha, pasajeros y vehículo en el calendario de WeTravel, donde también escribes la dirección de recogida. Si tu ruta no aparece, escríbenos por WhatsApp y te cotizamos."
-      ],
-      [
-        "¿Quién opera Ruta Shuttle?",
-        "Ruta Shuttle es el nombre comercial de Ruta del Spondylus Rutsponsa S.A., empresa ecuatoriana de transporte turístico fundada en 2017 y registrada en Puerto López, Manabí. Llevamos viajeros por todo el país, de la costa a los Andes."
       ]
     ],
     "contact": {
@@ -526,7 +522,8 @@
       "trip": "Tu viaje",
       "tripPh": "Desde dónde hasta dónde, cuántas personas, paradas que quieras…",
       "send": "Enviar mensaje",
-      "phoneLabel": "Teléfono"
+      "phoneLabel": "Teléfono",
+      "waLabel": "WhatsApp"
     },
     "footer": {
       "logoAlt": "Ruta Shuttle, compañía de transporte turístico",
@@ -541,7 +538,9 @@
       "address": "Domicilio",
       "follow": "Síguenos en Instagram",
       "ruc": "RUC",
-      "ta": "Tripadvisor"
+      "ta": "Tripadvisor",
+      "phone": "Teléfono",
+      "wa": "WhatsApp"
     },
     "dialog": {
       "eyebrow": "Reserva tu traslado",
@@ -574,7 +573,7 @@
     },
     "hub": {
       "title": "{kw} y traslados privados | Ruta Shuttle",
-      "desc": "{lede} Mira los precios y reserva en línea tu traslado privado desde {city}.",
+      "desc": "{lede} Reserva en línea tu traslado privado desde {city}.",
       "eyebrow": "{city}, Ecuador",
       "routes": "Rutas",
       "routesVal": "{n} desde ${min}",
@@ -715,6 +714,7 @@
       "cuenca": "Cúpulas azules de la Catedral Nueva de Cuenca",
       "quito": "Monumento a la Independencia en la Plaza Grande, centro histórico de Quito",
       "guayaquil": "Malecón 2000 y su rueda moscovita junto al río Guayas en Guayaquil"
-    }
+    },
+    "brandLogoAlt": "Logo de Ruta Shuttle"
   }
 }

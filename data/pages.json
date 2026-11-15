@@ -40,6 +40,10 @@
           "{address}"
         ],
         [
+          "Operating permit",
+          "National tourist transport permit, with vehicles based in Ecuador's main cities"
+        ],
+        [
           "Service area",
           "All of Ecuador, with pickups in Quito, Cuenca and Guayaquil"
         ],
@@ -185,6 +189,10 @@
           "{address}"
         ],
         [
+          "Permiso de operación",
+          "Transporte turístico a nivel nacional, con unidades en las principales ciudades del Ecuador"
+        ],
+        [
           "Cobertura",
           "Todo el Ecuador, con recogidas en Quito, Cuenca y Guayaquil"
         ],
@@ -195,7 +203,7 @@
       ]
     },
     "contact": {
-      "title": "Contacto Ruta Shuttle | WhatsApp, correo y ayuda con reservas",
+      "title": "Contacto Ruta Shuttle | WhatsApp, correo y reservas",
       "desc": "Escribe a Ruta Shuttle por WhatsApp o correo para traslados privados en Ecuador. Respondemos en inglés y español.",
       "h1": "Contacto",
       "lede": "Escríbenos por WhatsApp para la respuesta más rápida, llámanos o envía el formulario y te respondemos por correo. Atendemos en inglés y español.",

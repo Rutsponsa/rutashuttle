@@ -10,7 +10,9 @@
 //   data/rich.json        long-form route pages (Cuenca to Guayaquil)
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 
+const PAGE_HASH = {};
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MODE = process.argv[2] === "preview" ? "preview" : "site";
 const OUT = path.join(ROOT, MODE === "preview" ? "preview" : "dist");
@@ -24,6 +26,9 @@ const hubsEs = read("data/hubs.es.json");
 const rich = read("data/rich.json");
 const TEXT = read("data/text.json");
 const CSS = fs.readFileSync(path.join(ROOT, "assets/site.css"), "utf8");
+// Inlined in every page so the browser can paint without waiting for an extra request.
+const CSS_MIN = CSS.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\s+/g, " ").replace(/\s*([{};:,>])\s*/g, "$1").replace(/;}/g, "}").trim();
+const FONT_CSS = "https://fonts.googleapis.com/css2?family=Lexend:wght@500;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap";
 const JS = fs.readFileSync(path.join(ROOT, "assets/site.js"), "utf8");
 const LANGS = ["en", "es"];
 
@@ -154,10 +159,10 @@ const TIRE = `<svg class="tire" viewBox="0 0 100 100" aria-hidden="true"><circle
 
 // Full-width cover photos: home fleet + one per city. Files come from src/photos.py.
 const COVERS = {
-  home: { dir: "hero", base: "fleet", w: [800, 1280, 1672], h: 941, pos: "58% 70%", posM: "52% 78%" },
-  cuenca: { dir: "covers", base: "cuenca", w: [800, 1280, 1920], h: 1080, pos: "50% 45%", posM: "57% 50%" },
-  quito: { dir: "covers", base: "quito", w: [800, 1280, 1500], h: 844, pos: "50% 30%", posM: "58% 35%" },
-  guayaquil: { dir: "covers", base: "guayaquil", w: [800, 1280, 1920], h: 1080, pos: "50% 45%", posM: "72% 40%" },
+  home: { dir: "hero", base: "fleet", w: [640, 960, 1280, 1672], h: 941, pos: "58% 70%", posM: "52% 78%" },
+  cuenca: { dir: "covers", base: "cuenca", w: [640, 960, 1280, 1920], h: 1080, pos: "50% 45%", posM: "57% 50%" },
+  quito: { dir: "covers", base: "quito", w: [640, 960, 1280, 1500], h: 844, pos: "50% 30%", posM: "58% 35%" },
+  guayaquil: { dir: "covers", base: "guayaquil", w: [640, 960, 1280, 1920], h: 1080, pos: "50% 45%", posM: "72% 40%" },
 };
 const coverSet = (c, ext) => c.w.map((w) => `${url.asset(`${c.dir}/${c.base}-${w}.${ext}`)} ${w}w`).join(", ");
 const coverPreload = (k) => `<link rel="preload" as="image" type="image/avif" imagesrcset="${coverSet(COVERS[k], "avif")}" imagesizes="100vw" fetchpriority="high">`;
@@ -185,6 +190,10 @@ function BIZ(lang) {
     knowsLanguage: ["en", "es"],
   };
   node.telephone = "+" + cfg.phone;
+  node.contactPoint = [
+    { "@type": "ContactPoint", contactType: "customer service", telephone: "+" + cfg.phone, email: cfg.email, availableLanguage: ["English", "Spanish"], areaServed: "EC" },
+    { "@type": "ContactPoint", contactType: "reservations", name: "WhatsApp", telephone: "+" + cfg.whatsapp, url: "https://wa.me/" + cfg.whatsapp, availableLanguage: ["English", "Spanish"], areaServed: "EC" },
+  ];
   return node;
 }
 
@@ -203,7 +212,7 @@ function buildLang(lang) {
     }).join("");
     return `<a class="skip" href="#main">${T.skip}</a>
 <header class="site-header"><div class="wrap">
-  <a class="brand" href="${url.home(lang)}" aria-label="${T.brandHome}"><img class="brand-mark" src="${url.asset("logo-mark.png")}" alt="" width="54" height="40"><span class="brand-name">Ruta <b>Shuttle</b></span></a>
+  <a class="brand" href="${url.home(lang)}" aria-label="${T.brandHome}"><img class="brand-mark" src="${url.asset("logo-mark.png")}" alt="${T.brandLogoAlt}" width="54" height="40"><span class="brand-name">Ruta <b>Shuttle</b></span></a>
   <nav class="nav" id="site-nav" aria-label="Main">
     <a href="${url.home(lang)}">${T.nav.home}</a>
     <a href="${url.hub("quito", lang)}">Quito</a>
@@ -218,7 +227,7 @@ function buildLang(lang) {
 </div></header>`;
   }
 
-  const dateField = (id, name, label) => `<div class="field"><label for="${id}">${label}</label><div class="control date" data-datepicker><input id="${id}" class="date-display" type="text" readonly placeholder="${T.search.datePh}" aria-haspopup="dialog" aria-expanded="false" autocomplete="off">${I.cal}<input type="hidden" name="${name}"></div></div>`;
+  const dateField = (id, name, label) => `<div class="field"><label for="${id}">${label}</label><div class="control date" data-datepicker><input id="${id}" class="date-display" type="text" readonly role="combobox" placeholder="${T.search.datePh}" aria-haspopup="dialog" aria-expanded="false" autocomplete="off">${I.cal}<input type="hidden" name="${name}"></div></div>`;
 
   function searchBox({ from = "", heading = T.search.heading } = {}) {
     const S = T.search;
@@ -261,7 +270,31 @@ function buildLang(lang) {
 </div></section>`;
 
   const includedList = () => `<ul class="checks">${T.included.items.map((t) => `<li>${I.check}<span>${esc(t)}</span></li>`).join("")}</ul>`;
-  const faqBlock = (items) => `<div class="faq">${items.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div>`;
+  // Internal links inside FAQ answers: route names ("Cuenca to Guayaquil") and city names point to their pages.
+  const linkTargets = [
+    ...routes.map((r) => [`${pName(r.from, lang)} ${lang === "es" ? "a" : "to"} ${pName(r.to, lang)}`, url.route(r, lang)]),
+    ...routes.map((r) => [r.title, url.route(r, lang)]),
+    ...Object.keys(hubs).map((k) => [hubs[k].name, url.hub(k, lang)]),
+    // a destination town on its own ("Mindo") points to the closest (cheapest) route that goes there
+    ...[...new Set(routes.map((r) => r.to))].filter((id) => !hubs[id] && places[id] && ["town", "beach", "park"].includes(places[id].kind))
+      .map((id) => [pName(id, lang), url.route(routes.filter((r) => r.to === id).sort((x, y) => x.price - y.price)[0], lang)]),
+  ].sort((x, y) => y[0].length - x[0].length);
+  const linkify = (text, here) => {
+    let out = esc(text);
+    const used = new Set([here]);
+    const tokens = [];
+    for (const [phrase, href] of linkTargets) {
+      if (used.has(href)) continue;
+      const re = new RegExp(`(?<![\\p{L}>])${esc(phrase).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\p{L}])`, "iu");
+      const m = out.match(re);
+      if (!m) continue;
+      tokens.push(`<a href="${href}">${m[0]}</a>`);
+      out = out.slice(0, m.index) + `\u0000${tokens.length - 1}\u0000` + out.slice(m.index + m[0].length);
+      used.add(href);
+    }
+    return out.replace(/\u0000(\d+)\u0000/g, (_, i) => tokens[i]);
+  };
+  const faqBlock = (items, here) => `<div class="faq">${items.map(([q, a]) => `<details><summary><h3>${esc(q)}</h3></summary><p>${linkify(a, here)}</p></details>`).join("")}</div>`;
 
   function contactSection(top) {
     const C = T.contact;
@@ -273,7 +306,10 @@ function buildLang(lang) {
   <div class="contact">
     <div class="contact-ways">
       <a class="btn btn-wa" href="${wa(C.waHello)}" target="_blank" rel="noopener">${I.wa}${C.chat}</a>
-      <div class="way"><span>${C.phoneLabel}</span><strong class="num"><a href="tel:+${cfg.phone}">${esc(cfg.phoneDisplay)}</a></strong></div>
+      <div class="way-pair">
+        <div class="way"><span>${C.phoneLabel}</span><strong class="num"><a href="tel:+${cfg.phone}">${esc(cfg.phoneDisplay)}</a></strong></div>
+        <div class="way"><span>${C.waLabel}</span><strong class="num"><a href="${wa(C.waHello)}" target="_blank" rel="noopener">${esc(cfg.whatsappDisplay)}</a></strong></div>
+      </div>
       <div class="way"><span>${C.email}</span><strong><a href="mailto:${cfg.email}">${esc(cfg.email)}</a></strong></div>${top ? top.extra : ""}
     </div>
     <form class="card-form" data-contact novalidate toolname="contact_ruta_shuttle" tooldescription="Send a message to Ruta Shuttle about a private transfer in Ecuador: name, email, phone, travel date and trip details.">
@@ -299,11 +335,11 @@ function buildLang(lang) {
     const top = routes.filter((r) => r.featured).slice(0, 6);
     return `<footer class="site-footer"><div class="wrap">
   <div class="foot-grid">
-    <div style="display:grid;gap:12px;align-content:start"><img class="foot-logo" src="${url.asset("logo-full.png")}" alt="${F.logoAlt}" width="170" height="135"><p class="note">${F.tag}</p></div>
-    <div><h4>${F.destinations}</h4><ul>${Object.keys(hubs).map((h) => `<li><a href="${url.hub(h, lang)}">${hubs[h].name}</a></li>`).join("")}</ul></div>
-    <div><h4>${F.popular}</h4><ul>${top.map((r) => `<li><a href="${url.route(r, lang)}">${esc(r.title)}</a></li>`).join("")}</ul></div>
-    <div><h4>${F.contact}</h4><ul><li class="num"><a href="tel:+${cfg.phone}">${esc(cfg.phoneDisplay)}</a></li><li><a href="mailto:${cfg.email}">${esc(cfg.email)}</a></li><li><a href="${cfg.instagram}" target="_blank" rel="noopener">${F.follow}</a></li><li><a href="${cfg.tripadvisor}" target="_blank" rel="noopener">${F.ta}</a></li><li class="note">${F.address}: ${esc(cfg.address.display)}</li><li><a href="${url.page("contact", lang)}">${F.form}</a></li></ul></div>
-    <div><h4>${PG.labels.company}</h4><ul>${["about", "contact", "privacy", "terms"].map((x) => `<li><a href="${url.page(x, lang)}">${PG.labels[x]}</a></li>`).join("")}</ul></div>
+    <div style="display:grid;gap:12px;align-content:start"><img class="foot-logo" src="${url.asset("logo-full.png")}" alt="${F.logoAlt}" width="170" height="135" loading="lazy" decoding="async"><p class="note">${F.tag}</p></div>
+    <div><h2>${F.destinations}</h2><ul>${Object.keys(hubs).map((h) => `<li><a href="${url.hub(h, lang)}">${hubs[h].name}</a></li>`).join("")}</ul></div>
+    <div><h2>${F.popular}</h2><ul>${top.map((r) => `<li><a href="${url.route(r, lang)}">${esc(r.title)}</a></li>`).join("")}</ul></div>
+    <div><h2>${F.contact}</h2><ul><li class="num">${F.phone}: <a href="tel:+${cfg.phone}">${esc(cfg.phoneDisplay)}</a></li><li class="num">${F.wa}: <a href="https://wa.me/${cfg.whatsapp}" target="_blank" rel="noopener">${esc(cfg.whatsappDisplay)}</a></li><li><a href="mailto:${cfg.email}">${esc(cfg.email)}</a></li><li><a href="${cfg.instagram}" target="_blank" rel="noopener">${F.follow}</a></li><li><a href="${cfg.tripadvisor}" target="_blank" rel="noopener">${F.ta}</a></li><li class="note">${F.address}: ${esc(cfg.address.display)}</li><li><a href="${url.page("contact", lang)}">${F.form}</a></li></ul></div>
+    <div><h2>${PG.labels.company}</h2><ul>${["about", "contact", "privacy", "terms"].map((x) => `<li><a href="${url.page(x, lang)}">${PG.labels[x]}</a></li>`).join("")}</ul></div>
   </div>
   <p class="legal">© ${new Date().getFullYear()} ${esc(cfg.legalName)}, ${F.ruc} ${cfg.taxID}</p>
 </div></footer>
@@ -327,8 +363,8 @@ function buildLang(lang) {
       config: cfg, urls: Object.fromEntries(routes.map((r) => [r.id, url.route(r, lang)])), contactUrl: url.anchor("contact", lang),
       preview: MODE === "preview", icons: { wa: I.wa },
     };
-    const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">`;
-    const css = MODE === "preview" ? `<style>${CSS}</style>` : `<link rel="stylesheet" href="/assets/site.css">`;
+    const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="${FONT_CSS}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${FONT_CSS}"></noscript>`;
+    const css = `<style>${CSS_MIN}</style>`;
     const js = `<script>window.RS=${JSON.stringify(data)};</script>` + (MODE === "preview" ? `<script>${JS}</script>` : `<script src="/assets/site.js" defer></script>`);
     const hreflang = MODE === "site" && !noindex ? LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${cfg.domain}${alt[l]}">`).join("\n") + `\n<link rel="alternate" hreflang="x-default" href="${cfg.domain}${alt.en}">` : "";
     const D = cfg.domain;
@@ -370,6 +406,7 @@ ${css}`;
     const dest = path.join(OUT, file);
     fs.mkdirSync(path.dirname(dest), { recursive: true });
     fs.writeFileSync(dest, html);
+    if (MODE === "site" && here && !noindex) PAGE_HASH[here] = crypto.createHash("sha1").update(html).digest("hex");
   }
   const alts = (fn) => Object.fromEntries(LANGS.map((l) => [l, fn(l)]));
   const D = cfg.domain;
@@ -390,12 +427,12 @@ ${css}`;
     const hubCards = Object.entries(hubs).map(([k, h]) => {
       const rs = routes.filter((r) => r.hub === k);
       const min = Math.min(...rs.map((r) => r.price));
-      return `<a class="hub" href="${url.hub(k, lang)}">
-  <div class="hub-top"><h3>${h.name}</h3><span class="hub-elev num">${h.elev}</span></div>
-  ${cityPhoto(k)}
-  <ul>${rs.slice(0, 4).map((r) => `<li>${esc(r.title)}</li>`).join("")}</ul>
-  <div class="hub-foot"><span class="num">${fmt(H.routesFrom, { n: rs.length, min })}</span><span class="go">${H.seeAll}</span></div>
-</a>`;
+      return `<article class="hub">
+  <div class="hub-top"><h3><a href="${url.hub(k, lang)}">${h.name}</a></h3><span class="hub-elev num">${h.elev}</span></div>
+  <a class="hub-photo-a" href="${url.hub(k, lang)}" tabindex="-1" aria-hidden="true">${cityPhoto(k)}</a>
+  <ul>${rs.slice(0, 4).map((r) => `<li><a href="${url.route(r, lang)}">${esc(r.title)}</a></li>`).join("")}</ul>
+  <div class="hub-foot"><span class="num">${fmt(H.routesFrom, { n: rs.length, min })}</span><a class="go" href="${url.hub(k, lang)}">${H.seeAll}</a></div>
+</article>`;
     }).join("");
     const reviews = cfg.reviews.length
       ? `<div class="grid cols-3">${cfg.reviews.map((r) => `<blockquote class="info"><p>${esc(r.text)}</p><footer class="note">${esc(r.name)}</footer></blockquote>`).join("")}</div>`
@@ -437,7 +474,7 @@ ${reviews ? `<section class="section tint" id="reviews"><div class="wrap"><div c
 
 <section class="section"><div class="wrap">
   <div class="section-head"><p class="eyebrow">${H.faqEyebrow}</p><h2>${H.faqH2}</h2></div>
-  ${faqBlock(T.faqGeneral)}
+  ${faqBlock(T.faqGeneral, url.home(lang))}
 </div></section>
 
 ${contactSection()}`;
@@ -486,7 +523,7 @@ ${fleetSection("vehicles")}
 
 <section class="section tint"><div class="wrap">
   <div class="section-head"><p class="eyebrow">${X.faqEyebrow}</p><h2>${fmt(X.faqH2, v)}</h2></div>
-  ${faqBlock([...h.faq, ...T.faqGeneral.slice(1, 4)])}
+  ${faqBlock([...h.faq, ...T.faqGeneral.slice(1, 4)], url.hub(k, lang))}
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -570,7 +607,7 @@ ${fleetSection("vehicles")}
 
 <section class="section tint"><div class="wrap">
   <div class="section-head"><p class="eyebrow">${R0.faqEyebrow}</p><h2>${fmt(R0.faqH2, v)}</h2></div>
-  ${faqBlock(faq)}
+  ${faqBlock(faq, url.route(r, lang))}
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -578,7 +615,12 @@ ${fleetSection("vehicles")}
   <div class="grid cols-3">${related.map(routeCard).join("")}</div>
   <p style="margin-top:20px"><a class="btn btn-ghost" href="${url.hub(r.hub, lang)}">${fmt(R0.allBtn, v)}</a></p>
 </div></section>`;
-    page({ title: fmt(R0.title, v), desc: fmt(R0.desc, v), body, here: url.route(r, lang), alt: alts((l) => url.route(r, l)), ld: [
+    // Keep titles under ~60 characters and descriptions under ~160 so Google shows them whole.
+    let rTitle = fmt(R0.title, v);
+    if (rTitle.length > 60) rTitle = `${v.kw} | Ruta Shuttle`;
+    let rDesc = fmt(R0.desc, v);
+    if (rDesc.length > 160) rDesc = rDesc.replace(lang === "es" ? "Privado, puerta a puerta, desde" : "Private, door to door, from", lang === "es" ? "Desde" : "From");
+    page({ title: rTitle, desc: rDesc, body, here: url.route(r, lang), alt: alts((l) => url.route(r, l)), ld: [
       crumbs([[T.nav.home, url.home(lang)], [h.name, url.hub(r.hub, lang)], [r.title, url.route(r, lang)]]),
       serviceLd(r),
       faqLd(faq),
@@ -671,11 +713,17 @@ fs.mkdirSync(OUT, { recursive: true });
 LANGS.forEach(buildLang);
 const assetOut = MODE === "preview" ? OUT : path.join(OUT, "assets");
 fs.mkdirSync(assetOut, { recursive: true });
-for (const f of ["logo-mark.png", "logo-full.png", ...(MODE === "site" ? ["site.css", "site.js", "og-image.jpg"] : [])]) fs.copyFileSync(path.join(ROOT, "assets", f), path.join(assetOut, f));
+for (const f of ["logo-mark.png", "logo-full.png", ...(MODE === "site" ? ["site.js", "og-image.jpg"] : [])]) fs.copyFileSync(path.join(ROOT, "assets", f), path.join(assetOut, f));
 fs.mkdirSync(path.join(assetOut, "hero"), { recursive: true });
 for (const dir of ["hero", "cities", "covers"]) { fs.mkdirSync(path.join(assetOut, dir), { recursive: true }); for (const f of fs.readdirSync(path.join(ROOT, "assets", dir))) fs.copyFileSync(path.join(ROOT, "assets", dir, f), path.join(assetOut, dir, f)); }
 if (MODE === "site") {
   const D = cfg.domain, today = new Date().toISOString().slice(0, 10);
+  // lastmod = the day a page's HTML really changed (kept in data/lastmod.json)
+  const lmFile = path.join(ROOT, "data", "lastmod.json");
+  const LM = fs.existsSync(lmFile) ? JSON.parse(fs.readFileSync(lmFile, "utf8")) : {};
+  for (const [u, h] of Object.entries(PAGE_HASH)) if (!LM[u] || LM[u].hash !== h) LM[u] = { hash: h, date: today };
+  for (const u of Object.keys(LM)) if (!PAGE_HASH[u]) delete LM[u];
+  fs.writeFileSync(lmFile, JSON.stringify(Object.fromEntries(Object.entries(LM).sort()), null, 1) + "\n");
   const all = [{ en: url.home("en"), es: url.home("es") }, ...SITEMAP];
   const imgFor = (p) => {
     const hub = Object.keys(COVERS).find((k) => k !== "home" && p === url.hub(k, "en"));
@@ -684,7 +732,7 @@ if (MODE === "site") {
     const list = c ? [`${D}/assets/${c.dir}/${c.base}-${c.w[c.w.length - 1]}.jpg`, ...extra] : [`${D}/assets/og-image.jpg`];
     return list.map((u) => `    <image:image><image:loc>${u}</image:loc></image:image>\n`).join("");
   };
-  const entry = (alt, l) => `  <url>\n    <loc>${D}${alt[l]}</loc>\n    <lastmod>${today}</lastmod>\n` +
+  const entry = (alt, l) => `  <url>\n    <loc>${D}${alt[l]}</loc>\n    <lastmod>${(LM[alt[l]] || { date: today }).date}</lastmod>\n` +
     LANGS.map((x) => `    <xhtml:link rel="alternate" hreflang="${x}" href="${D}${alt[x]}"/>`).join("\n") +
     `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${D}${alt.en}"/>\n` + imgFor(alt.en) + `  </url>`;
   fs.writeFileSync(path.join(OUT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
@@ -694,7 +742,7 @@ if (MODE === "site") {
   const R = routesFor("en");
   const llms = [
     "# Ruta Shuttle", "",
-    "> Private tourist transportation across Ecuador: airport transfers and door-to-door rides from Quito, Cuenca and Guayaquil. Ruta Shuttle is the trade name of " + cfg.legalName + ", founded in 2017 and registered in Puerto López, Manabí, Ecuador, serving the whole country. Prices are per vehicle, in US dollars. Bookings online through WeTravel or on WhatsApp. Service in English and Spanish.", "",
+    "> Private tourist transportation across Ecuador: airport transfers and door-to-door rides from Quito, Cuenca and Guayaquil. Ruta Shuttle is the trade name of " + cfg.legalName + ", founded in 2017 and registered in Puerto López, Manabí, Ecuador. It holds a national tourist transport permit and has vehicles based in Ecuador's main cities, so it serves the whole country. Prices are per vehicle, in US dollars. Bookings online through WeTravel or on WhatsApp. Service in English and Spanish.", "",
     "## Destinations",
     ...Object.keys(hubsEn).map((h) => `- [${hubsEn[h].keyword}](${D}${url.hub(h, "en")}): ${hubsEn[h].lede}`), "",
     "## Routes",
@@ -708,11 +756,11 @@ if (MODE === "site") {
     "## Company",
     ...["about", "contact", "privacy", "terms"].map((k) => `- [${PAGES.en.labels[k]}](${D}/${PAGES.en.slugs[k]}/)`), "",
     "## Contact",
-    `- Phone: ${cfg.phoneDisplay}`, `- Email: ${cfg.email}`, `- Registered office: ${cfg.address.display}`, `- Instagram: ${cfg.instagram}`, `- Google Maps: ${cfg.maps}`, `- Tripadvisor: ${cfg.tripadvisor}`, `- Contact page: ${D}/contact/`, "",
+    `- Phone (calls): ${cfg.phoneDisplay}`, `- WhatsApp: ${cfg.whatsappDisplay} (https://wa.me/${cfg.whatsapp})`, `- Email: ${cfg.email}`, `- Registered office: ${cfg.address.display}`, `- Instagram: ${cfg.instagram}`, `- Google Maps: ${cfg.maps}`, `- Tripadvisor: ${cfg.tripadvisor}`, `- Contact page: ${D}/contact/`, "",
   ].join("\n");
   fs.writeFileSync(path.join(OUT, "llms.txt"), llms);
   fs.writeFileSync(path.join(OUT, "index.md"), llms);
   for (const f of ["sitemap.xsl", "_headers"]) fs.copyFileSync(path.join(ROOT, "src", f), path.join(OUT, f));
 }
-const per = 1 + Object.keys(hubsEn).length + routesEn.length;
-console.log(`Built ${MODE}: ${per * LANGS.length} pages (${per} per language) -> ${OUT}`);
+const built = fs.readdirSync(OUT, { recursive: true }).filter((f) => String(f).endsWith(".html")).length;
+console.log(`Built ${MODE}: ${built} HTML pages (${built / LANGS.length} per language, incl. 404) -> ${OUT}`);

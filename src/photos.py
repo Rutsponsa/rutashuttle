@@ -20,9 +20,9 @@ JOBS = [
     ("quito", QUITO, (100, 0, 1900, 1200), .35, "cities", (480, 960)),
     ("guayaquil", GYE, (442, 291, 2538, 1689), .15, "cities", (480, 960)),
     # 16:9 city page covers (subject kept right of center, text sits on the left)
-    ("cuenca", CUENCA, (0, 330, 2500, 1736), .35, "covers", (800, 1280, 1920)),
-    ("quito", QUITO, (0, 80, 1500, 924), .35, "covers", (800, 1280, 1500)),
-    ("guayaquil", GYE, (0, 250, 2576, 1699), .15, "covers", (800, 1280, 1920)),
+    ("cuenca", CUENCA, (0, 330, 2500, 1736), .35, "covers", (640, 960, 1280, 1920)),
+    ("quito", QUITO, (0, 80, 1500, 924), .35, "covers", (640, 960, 1280, 1500)),
+    ("guayaquil", GYE, (0, 250, 2576, 1699), .15, "covers", (640, 960, 1280, 1920)),
 ]
 
 T_MEAN, T_SD, T_SAT = .54, .235, .095
@@ -66,8 +66,8 @@ def run():
             h = round(w * g.height / g.width)
             r = g.resize((w, h), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=0.7, percent=45, threshold=2))
             base = os.path.join(out, f"{name}-{w}")
-            r.save(base + ".avif", quality=58, speed=4)
-            r.save(base + ".webp", quality=80, method=6)
+            r.save(base + ".avif", quality=48 if folder == "covers" else 58, speed=4)
+            r.save(base + ".webp", quality=72 if folder == "covers" else 80, method=6)
             if w == widths[-1]:
                 r.save(base + ".jpg", quality=82, optimize=True, progressive=True)
         print("done", folder, name, widths)
