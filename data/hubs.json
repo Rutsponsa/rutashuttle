@@ -1,0 +1,144 @@
+{
+  "cuenca": {
+    "name": "Cuenca",
+    "keyword": "Cuenca Transportation",
+    "h1": "Cuenca Transportation and Private Transfers",
+    "lede": "Airport pickups, rides to the coast and drivers by the hour, all private and door to door.",
+    "airport": "Mariscal Lamar Airport (CUE)",
+    "elev": "2,560 m",
+    "facts": [
+      [
+        "Airport",
+        "Mariscal Lamar (CUE), 3 km from the historic center"
+      ],
+      [
+        "City elevation",
+        "2,560 m above sea level"
+      ],
+      [
+        "Most booked",
+        "Cuenca to Guayaquil, 3.5 to 4 hours"
+      ]
+    ],
+    "local": [
+      [
+        "A small airport, a short ride",
+        "Mariscal Lamar sits inside the city. Most hotels in El Centro are 10 to 15 minutes away, and your driver waits at the arrivals exit with your name on a sign."
+      ],
+      [
+        "The road to the coast crosses Cajas",
+        "Going to Guayaquil, Salinas or Montañita you climb past 4,000 m at Tres Cruces before dropping to sea level. Bring a light jacket, and tell your driver if you get carsick on curvy roads."
+      ],
+      [
+        "Stops are part of the ride",
+        "Want a few minutes at the Cajas lagoons or lunch on the way? Ask when you book or tell the driver on the day."
+      ]
+    ],
+    "faq": [
+      [
+        "How far is Cuenca Airport from the historic center?",
+        "About 3 km. The ride usually takes 10 to 15 minutes, a little more at rush hour."
+      ],
+      [
+        "Can you pick me up at my Airbnb, not a hotel?",
+        "Yes. Write the exact address when you book and we pick you up at the door."
+      ],
+      [
+        "Do you go to Guayaquil Airport directly?",
+        "Yes. Most of our Cuenca to Guayaquil rides end at the airport. Give us your flight time and we plan the departure so you arrive with time to spare."
+      ],
+      [
+        "Is the drive over Cajas safe?",
+        "It is a paved highway our drivers cover every week. Fog can roll in, so we drive it with time to spare and never rush."
+      ]
+    ]
+  },
+  "guayaquil": {
+    "name": "Guayaquil",
+    "keyword": "Guayaquil Transportation",
+    "h1": "Guayaquil Transportation and Airport Transfers",
+    "lede": "From José Joaquín de Olmedo Airport to the beaches, the Andes or your hotel downtown.",
+    "airport": "José Joaquín de Olmedo Airport (GYE)",
+    "elev": "4 m",
+    "facts": [
+      [
+        "Airport",
+        "José Joaquín de Olmedo (GYE), next to the city"
+      ],
+      [
+        "City elevation",
+        "4 m above sea level"
+      ],
+      [
+        "Most booked",
+        "Guayaquil to Cuenca, 3.5 to 4 hours"
+      ]
+    ],
+    "local": [
+      [
+        "Met inside arrivals",
+        "Your driver waits at the arrivals exit with a name sign, so you skip the taxi line."
+      ],
+      [
+        "Beaches are close",
+        "Salinas is about 2 hours away and Montañita under 3, so you can land in the morning and be on the sand by lunch."
+      ],
+      [
+        "Up to the Andes",
+        "The ride to Cuenca climbs from sea level to more than 4,000 m. Take it slow on your first day up high."
+      ]
+    ],
+    "faq": [
+      [
+        "Do you track my flight?",
+        "Send us your flight number when you book and we adjust the pickup if it lands early or late."
+      ],
+      [
+        "Can you take us from the airport straight to Cuenca?",
+        "Yes, that is our most popular ride. The driver meets you at arrivals and you go straight up through Cajas."
+      ]
+    ]
+  },
+  "quito": {
+    "name": "Quito",
+    "keyword": "Quito Transportation",
+    "h1": "Quito Transportation and Airport Shuttle",
+    "lede": "Private rides from Mariscal Sucre Airport and day transfers to Cotopaxi, Mindo, Papallacta and beyond.",
+    "airport": "Mariscal Sucre Airport (UIO)",
+    "elev": "2,850 m",
+    "facts": [
+      [
+        "Airport",
+        "Mariscal Sucre (UIO), in Tababela, 45 to 60 min from the city"
+      ],
+      [
+        "City elevation",
+        "2,850 m above sea level"
+      ],
+      [
+        "Most booked",
+        "Quito Airport to the city"
+      ]
+    ],
+    "local": [
+      [
+        "The airport is far out",
+        "Quito's airport is in Tababela, east of the city. A pre-booked ride saves you the late-night taxi negotiation after a long flight."
+      ],
+      [
+        "Volcanoes in every direction",
+        "Cotopaxi, Papallacta and Mindo are all day-trip distance, and we can drop you at a hacienda or lodge on the way."
+      ]
+    ],
+    "faq": [
+      [
+        "How long is the ride from Quito Airport to the Old Town?",
+        "Usually 45 to 60 minutes, longer at evening rush hour."
+      ],
+      [
+        "Can you stop at Cotopaxi on the way to Baños?",
+        "Yes. Tell us when you book and we plan the extra time."
+      ]
+    ]
+  }
+}

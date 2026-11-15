@@ -1,0 +1,40 @@
+{
+  "cuenca-to-guayaquil": {
+    "en": {
+      "intro": [
+        "The road from Cuenca to Guayaquil is one of the most dramatic drives in Ecuador. In about four hours you leave the colonial city at 2,560 m, climb through Cajas National Park to the Tres Cruces pass at more than 4,100 m, and then drop through cloud forest and banana farms to the warm coast.",
+        "Our driver picks you up at your hotel or Airbnb in Cuenca and takes you straight to Guayaquil Airport, your hotel, the bus terminal or the port. No shared van, no stops for other passengers, and you leave at the time that suits your flight."
+      ],
+      "sections": [
+        ["Plan your departure around your flight", "For a flight out of Guayaquil, we usually suggest leaving Cuenca five to six hours before departure. That covers the drive, possible fog on Cajas and check-in time. Tell us your flight and we confirm the pickup time with you."],
+        ["Make a stop in Cajas", "The lagoons of Cajas are right on the way. A 20 to 30 minute stop for photos and fresh air at Laguna Llaviucu or Toreadora is easy to add. For a longer visit, ask about our Cuenca to Guayaquil with Cajas option, or the longer route via the Ingapirca ruins."],
+        ["Your ears will notice", "You go from over 4,000 m to sea level in a couple of hours. Chewing gum helps with the pressure, and if you are prone to motion sickness, take something before the curvy section after Molleturo."]
+      ],
+      "facts": [["Distance", "About 195 km"], ["Drive time", "3.5 to 4 hours"], ["Highest point", "Tres Cruces, 4,160 m"], ["Drop-off", "Airport, hotel, port or terminal"]],
+      "faq": [
+        ["How long does it take to get from Cuenca to Guayaquil?", "Between 3.5 and 4 hours by private transfer, depending on fog in Cajas and traffic entering Guayaquil."],
+        ["Can you take me directly to Guayaquil Airport?", "Yes. Most of our rides on this route end at José Joaquín de Olmedo Airport. Share your flight time and we plan the pickup with room to spare."],
+        ["What is the best way to travel from Cuenca to Guayaquil?", "A private transfer is the most comfortable option: door to door, your own schedule and stops when you want them. Buses are cheaper but leave from the terminal and do not go to the airport."]
+      ],
+      "profile": { "Cuenca": "Cuenca", "Cajas lagoons": "Cajas lagoons", "Tres Cruces pass": "Tres Cruces pass", "Molleturo": "Molleturo", "Puerto Inca": "Puerto Inca", "Guayaquil": "Guayaquil" }
+    },
+    "es": {
+      "intro": [
+        "La carretera de Cuenca a Guayaquil es uno de los recorridos más impresionantes del Ecuador. En unas cuatro horas dejas la ciudad colonial a 2.560 m, subes por el Parque Nacional Cajas hasta el paso de Tres Cruces a más de 4.100 m y luego bajas entre bosque nublado y bananeras hasta la costa cálida.",
+        "Nuestro chofer te recoge en tu hotel o Airbnb en Cuenca y te lleva directo al aeropuerto de Guayaquil, a tu hotel, al terminal o al puerto. Sin van compartida, sin paradas por otros pasajeros y a la hora que mejor le quede a tu vuelo."
+      ],
+      "sections": [
+        ["Planifica la salida según tu vuelo", "Para un vuelo desde Guayaquil, solemos sugerir salir de Cuenca cinco a seis horas antes. Eso cubre el viaje, la posible neblina en el Cajas y el tiempo del check-in. Cuéntanos tu vuelo y confirmamos contigo la hora de recogida."],
+        ["Haz una parada en el Cajas", "Las lagunas del Cajas están en el camino. Es fácil sumar una parada de 20 a 30 minutos para fotos y aire puro en la laguna Llaviucu o la Toreadora. Para una visita más larga, pregunta por nuestra opción Cuenca a Guayaquil con Cajas, o la ruta por las ruinas de Ingapirca."],
+        ["Tus oídos lo van a notar", "Pasas de más de 4.000 m al nivel del mar en un par de horas. Masticar chicle ayuda con la presión, y si te mareas fácil, toma algo antes del tramo de curvas después de Molleturo."]
+      ],
+      "facts": [["Distancia", "Unos 195 km"], ["Tiempo de viaje", "3,5 a 4 horas"], ["Punto más alto", "Tres Cruces, 4.160 m"], ["Destino", "Aeropuerto, hotel, puerto o terminal"]],
+      "faq": [
+        ["¿Cuánto se demora de Cuenca a Guayaquil?", "Entre 3,5 y 4 horas en traslado privado, según la neblina en el Cajas y el tráfico al entrar a Guayaquil."],
+        ["¿Me pueden llevar directo al aeropuerto de Guayaquil?", "Sí. La mayoría de nuestros viajes en esta ruta terminan en el aeropuerto José Joaquín de Olmedo. Danos la hora de tu vuelo y planificamos la recogida con tiempo de sobra."],
+        ["¿Cuál es la mejor forma de viajar de Cuenca a Guayaquil?", "Un traslado privado es la opción más cómoda: puerta a puerta, con tu propio horario y paradas cuando las quieras. Los buses son más baratos, pero salen del terminal y no llegan al aeropuerto."]
+      ],
+      "profile": { "Cuenca": "Cuenca", "Cajas lagoons": "Lagunas del Cajas", "Tres Cruces pass": "Paso Tres Cruces", "Molleturo": "Molleturo", "Puerto Inca": "Puerto Inca", "Guayaquil": "Guayaquil" }
+    }
+  }
+}

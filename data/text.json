@@ -1,0 +1,716 @@
+{
+  "en": {
+    "locale": "en-US",
+    "nav": {
+      "home": "Home",
+      "vehicles": "Vehicles",
+      "about": "About us",
+      "contact": "Contact"
+    },
+    "skip": "Skip to content",
+    "openMenu": "Open menu",
+    "brandHome": "Ruta Shuttle home",
+    "langGroup": "Choose language",
+    "search": {
+      "heading": "Find your ride",
+      "headingHub": "Rides from {city}",
+      "aria": "Find your transfer",
+      "from": "From",
+      "to": "To",
+      "date": "Date",
+      "pax": "Passengers",
+      "submit": "See prices",
+      "addr": "Hotel or exact address (optional)",
+      "addrPh": "e.g. Hotel Santa Lucía, Calle Presidente Borrero…",
+      "datePh": "Choose a date",
+      "pax1": "passenger",
+      "paxN": "passengers",
+      "paxMore": "More than 40",
+      "later": "You choose the date, number of passengers and your exact pickup address when you book."
+    },
+    "trust": [
+      "Only your group in the vehicle",
+      "Price per vehicle, agreed up front",
+      "Free cancellation up to 24 h before",
+      "Help in English and Spanish"
+    ],
+    "fromLabel": "From",
+    "fleet": {
+      "eyebrow": "Vehicles",
+      "h2": "A vehicle for every group size",
+      "lede": "Rates are per vehicle, not per person. When you book, the calendar shows each option for your route with its exact price.",
+      "unit": "passengers",
+      "items": [
+        {
+          "k": "sedan",
+          "name": "Sedan",
+          "pax": "1 to 3",
+          "note": "Couples and light travelers, comfortable around town"
+        },
+        {
+          "k": "suv",
+          "name": "SUV",
+          "pax": "1 to 3",
+          "note": "More luggage room and a higher ride for mountain roads"
+        },
+        {
+          "k": "van",
+          "name": "Van",
+          "pax": "4 to 6",
+          "note": "Families and small groups"
+        },
+        {
+          "k": "bigvan",
+          "name": "Large van",
+          "pax": "7 to 10",
+          "note": "Groups with plenty of luggage"
+        },
+        {
+          "k": "bus",
+          "name": "Minibus or bus",
+          "pax": "11 to 40",
+          "note": "Tour groups, weddings and events"
+        }
+      ]
+    },
+    "steps": {
+      "eyebrow": "How it works",
+      "h2": "Booked in a few minutes, met at the door",
+      "items": [
+        [
+          "Choose your route",
+          "Pick where you start and where you are going. You see the starting price right away."
+        ],
+        [
+          "Pick a date and vehicle",
+          "The booking calendar shows every vehicle for your group. A small deposit holds your ride."
+        ],
+        [
+          "Meet your driver",
+          "We send the driver's name and phone on WhatsApp. At airports they wait at arrivals with your name on a sign."
+        ]
+      ]
+    },
+    "included": {
+      "eyebrow": "Every ride includes",
+      "h2": "The little things that make a long drive easy",
+      "h2Route": "What is included",
+      "items": [
+        "Private, insured vehicle",
+        "Pickup and drop-off at your door",
+        "Help with your luggage",
+        "Air conditioning and clean seats",
+        "Coffee, restroom and photo stops on request",
+        "Free waiting time at airport arrivals"
+      ]
+    },
+    "faqGeneral": [
+      [
+        "Is this a private or shared transfer?",
+        "Always private. Only your group rides in the vehicle, and we leave when you are ready."
+      ],
+      [
+        "Is the price per person?",
+        "No, the price is per vehicle. A couple and a family of six each pay one rate for their vehicle size."
+      ],
+      [
+        "How do I pay?",
+        "You book online through WeTravel with any major card. A small deposit secures the ride, and you can pay the balance online up to 24 hours before or in cash to your driver."
+      ],
+      [
+        "What is the cancellation policy?",
+        "Cancel for free up to 24 hours before pickup. Card processing fees may not be refundable."
+      ],
+      [
+        "What if my flight is late?",
+        "Send us your flight number and we follow it. Your driver adjusts the pickup time, no extra charge for normal delays."
+      ],
+      [
+        "Do the drivers speak English?",
+        "Our drivers speak Spanish, and our team helps you in English on WhatsApp before and during the trip. If you want an English-speaking guide on board, ask us for a quote."
+      ],
+      [
+        "Can you do the trip the other way around?",
+        "Yes. Every route runs in both directions at the same rate."
+      ],
+      [
+        "Which cities and airports do you cover?",
+        "We pick you up in Quito, Cuenca and Guayaquil, including Mariscal Sucre, Mariscal Lamar and José Joaquín de Olmedo airports. From there we drive to the coast, the Andes and towns like Baños, Montañita, Puerto López, Mindo and Vilcabamba. For any other route in Ecuador, message us on WhatsApp and we send you a quote."
+      ],
+      [
+        "How much does a private transfer cost?",
+        "Prices are per vehicle in US dollars and start at $20 for the Cuenca airport transfer, $25 in Guayaquil and $35 in Quito. Longer rides start at $125 from Cuenca to Guayaquil and $135 from Guayaquil to Montañita. Every route page shows its starting price."
+      ],
+      [
+        "How many people fit in one vehicle?",
+        "A sedan or SUV carries 1 to 3 passengers, a van 4 to 6, a large van 7 to 10, and a minibus or bus 11 to 40. You choose the size in the booking calendar and see the exact price before you pay."
+      ],
+      [
+        "How do I book a ride?",
+        "Open your route, press Book now and pick your date, passengers and vehicle in the WeTravel calendar, where you also type your pickup address. If your route isn't listed, write to us on WhatsApp for a quote."
+      ],
+      [
+        "Who runs Ruta Shuttle?",
+        "Ruta Shuttle is the trade name of Ruta del Spondylus Rutsponsa S.A., an Ecuadorian tourist transport company founded in 2017 and registered in Puerto López, Manabí. We drive travelers across the whole country, from the coast to the Andes."
+      ]
+    ],
+    "contact": {
+      "eyebrow": "Contact",
+      "h2": "Questions before you book?",
+      "lede": "WhatsApp is the fastest way to reach us. We answer in English and Spanish.",
+      "chat": "Chat on WhatsApp",
+      "waHello": "Hi Ruta Shuttle! I have a question about a transfer.",
+      "email": "Email",
+      "name": "Name",
+      "phone": "WhatsApp or phone",
+      "date": "Travel date",
+      "trip": "Your trip",
+      "tripPh": "From where to where, how many people, any stops you want…",
+      "send": "Send message"
+    },
+    "footer": {
+      "logoAlt": "Ruta Shuttle, tourist transport company",
+      "tag": "Private tourist transportation across Ecuador.",
+      "destinations": "Destinations",
+      "popular": "Popular routes",
+      "contact": "Contact",
+      "form": "Contact form",
+      "legal": "Ruta Shuttle is a registered trade name.",
+      "pin": "Chat with us",
+      "pinAria": "Chat with us on WhatsApp",
+      "address": "Registered office",
+      "follow": "Follow us on Instagram",
+      "ruc": "RUC"
+    },
+    "dialog": {
+      "eyebrow": "Book your transfer",
+      "close": "Close",
+      "note": "Price per vehicle. Free cancellation up to 24 hours before pickup."
+    },
+    "home": {
+      "title": "Ecuador Transportation & Private Transfers | Ruta Shuttle",
+      "desc": "Private transportation in Ecuador: airport transfers and door-to-door rides from Quito, Cuenca and Guayaquil. See prices and book online.",
+      "eyebrow": "Private transfers across Ecuador",
+      "h1": "Ecuador Transportation, Door to Door",
+      "lede": "Private rides between airports, cities and beaches with local drivers who know every curve of the road. Choose your route, see the price and book in a few minutes.",
+      "destEyebrow": "Destinations",
+      "destH2": "Where does your trip start?",
+      "destLede": "We run transportation in Ecuador from three bases. Each one has its airport transfers, day trips and long rides to the coast or the Andes.",
+      "routesFrom": "{n} routes from ${min}",
+      "seeAll": "See all",
+      "popEyebrow": "Popular routes",
+      "popH2": "The rides travelers book most",
+      "aboutEyebrow": "About us",
+      "aboutH2": "Local drivers, from the Andes to the coast",
+      "aboutP1": "Ruta Shuttle is the trade name of {legal}, an Ecuadorian tourist transport company founded in 2017 in Puerto López, on the Manabí coast. Today we drive travelers, families and groups all over Ecuador, between airports, mountain towns, beaches and the edge of the Amazon.",
+      "aboutP2": "Hiring a driver in Ecuador should feel simple. You know the price before you go, you get the driver's details on WhatsApp, and someone on our team is a message away the whole trip.",
+      "reviewsEyebrow": "Reviews",
+      "reviewsH2": "What travelers say",
+      "reviewsPh": "Preview: your real Google or TripAdvisor reviews go here. This section stays hidden on the live site until we add them.",
+      "faqEyebrow": "FAQ",
+      "faqH2": "Good to know before you ride",
+      "heroAlt": "Ruta Shuttle fleet and drivers in front of a snow-capped volcano in the Ecuadorian Andes"
+    },
+    "hub": {
+      "title": "{kw} & Private Transfers | Ruta Shuttle",
+      "desc": "{lede} See prices and book your private transfer from {city} online.",
+      "eyebrow": "{city}, Ecuador",
+      "routes": "Routes",
+      "routesVal": "{n} from ${min}",
+      "allEyebrow": "All {city} routes",
+      "allH2": "Private transfers from {city}",
+      "allLede": "Every route runs both ways at the same rate. Prices are per vehicle for up to 3 passengers; bigger groups see their rate when booking.",
+      "notListed": "Going somewhere not listed?",
+      "notListedLink": "Ask us on WhatsApp",
+      "notListedTail": "and we send you a price.",
+      "waNotListed": "Hi Ruta Shuttle! I need a transfer from {city} to ",
+      "localEyebrow": "Local know-how",
+      "localH2": "Good to know about {city}",
+      "faqEyebrow": "FAQ",
+      "faqH2": "{kw} questions",
+      "otherEyebrow": "Other destinations",
+      "otherH2": "Starting somewhere else?",
+      "seeRoutes": "See routes"
+    },
+    "route": {
+      "title": "{kw} | Private Shuttle | Ruta Shuttle",
+      "desc": "{blurb} Private, door to door, from ${price} per vehicle.",
+      "eyebrow": "Private transfer",
+      "factFrom": "From",
+      "factTo": "To",
+      "factTime": "Drive time",
+      "approx": ", approx.",
+      "factElev": "Elevation",
+      "elevVal": "{a} to {b}",
+      "intro1": "{blurb} Your driver picks you up at your hotel, Airbnb or the airport and takes you straight to your door in {to}.",
+      "intro2": "No terminals, no changes and no waiting for other passengers. Stop for coffee, a restroom or photos whenever you like, and leave at the time that works for you.",
+      "profileH2": "The climb and the drop",
+      "profileNote": "Elevation along the road, in meters.",
+      "profileAria": "Elevation along the route, from {a} at {ae} to {b} at {be}",
+      "bookAria": "Book this transfer",
+      "fromPerVehicle": "From, per vehicle",
+      "bookList": [
+        "Sedan or SUV for up to 3 passengers",
+        "Larger vans and buses shown when booking",
+        "Free cancellation up to 24 h before"
+      ],
+      "waBook": "Hi Ruta Shuttle! I'd like to book {title}.",
+      "askWA": "Ask on WhatsApp",
+      "reverse": "Going the other way?",
+      "faqDurQ": "How long is the ride from {a} to {b}?",
+      "faqDurA": "Plan on {dur} by private transfer. Weather and traffic can change that a little, and stops add time.",
+      "faqEyebrow": "FAQ",
+      "faqH2": "{title} questions",
+      "moreEyebrow": "More from {city}",
+      "moreH2": "Other rides from {city}",
+      "allBtn": "All {city} transfers"
+    },
+    "js": {
+      "choosePickup": "Choose pickup",
+      "chooseDest": "Choose destination",
+      "chooseFirst": "Choose pickup first",
+      "other": "Somewhere else (ask us)",
+      "groups": {
+        "airport": "Airports",
+        "city": "Cities",
+        "town": "Towns and Andes",
+        "beach": "Coast and beaches",
+        "park": "Parks",
+        "service": "Local services"
+      },
+      "pax1": "passenger",
+      "paxN": "passengers",
+      "vehicle": [
+        "Sedan or SUV (up to 3)",
+        "Van (4 to 6)",
+        "Large van (7 to 10)",
+        "Minibus or bus (11 to 40)",
+        "Several vehicles, ask us"
+      ],
+      "private": "Private transfer",
+      "book": "Book now",
+      "details": "Route details",
+      "from": "From",
+      "reverse": "We run this route both ways at the same rate. In the booking, choose your date and add your pickup point.",
+      "priceNote": "Prices are per vehicle, not per person. You pick the vehicle and see the exact rate in the next step. Questions?",
+      "askWA": "Ask us on WhatsApp",
+      "quotePill": "Custom quote",
+      "quoteH": "We can still get you there",
+      "quoteP": "This trip is not in our list yet, but we drive all over Ecuador. Send us the details and we reply with a price, usually within the hour.",
+      "quoteWA": "Get a quote on WhatsApp",
+      "useForm": "Use the form",
+      "waHi": "Hi Ruta Shuttle! I'd like a private transfer from {from} to {to}",
+      "waOn": " on {date}",
+      "waFor": " for {pax}",
+      "waAddr": " Pickup or drop-off address: {addr}.",
+      "waOther": "a destination not on your list",
+      "chipAddr": "Pickup or drop-off: {addr}",
+      "bookWA": "Book on WhatsApp",
+      "previewWidget": "Your WeTravel calendar and vehicle options open here on the live site.",
+      "previewWidget2": "This preview cannot load outside scripts, so the widget only appears once the site is on rutashuttle.com.",
+      "openBooking": "Open this booking page",
+      "continueP": "Pick your date and vehicle on our secure booking page.",
+      "continue": "Continue to booking",
+      "soon": "Online booking for this route opens soon. Message us and we confirm your ride on WhatsApp.",
+      "wtText": "Book Now",
+      "formMissing": "Please add your {fields} so we can reply.",
+      "fields": {
+        "name": "name",
+        "email": "email",
+        "message": "trip details"
+      },
+      "formPreview": "Preview only: on the live site this message goes straight to your inbox.",
+      "formSetup": "The form is being set up. Please message us on WhatsApp for now.",
+      "sending": "Sending…",
+      "sent": "Thanks! We got your message and will reply soon.",
+      "fail": "That did not go through. Please try again or message us on WhatsApp.",
+      "subject": "New Ruta Shuttle inquiry",
+      "dp": {
+        "prev": "Previous month",
+        "next": "Next month",
+        "dialog": "Choose a date",
+        "today": "Today",
+        "clear": "Clear"
+      },
+      "wtTitle": "Select Departure Date",
+      "wtSlow": "The calendar is taking a while to load. You can also book on our secure WeTravel page."
+    },
+    "e404": {
+      "title": "Page not found | Ruta Shuttle",
+      "desc": "This page does not exist. Find your private transfer in Ecuador from Quito, Cuenca or Guayaquil.",
+      "eyebrow": "Error 404",
+      "h1": "Flat tire on this road",
+      "p1": "The page you were looking for took a wrong turn or no longer exists. Don't worry, our driver is already on it.",
+      "p2": "While he changes the tire, pick a new route below or write to us. We'll still get you where you're going.",
+      "home": "Back to home",
+      "wa": "Chat on WhatsApp",
+      "waText": "Hi Ruta Shuttle! I landed on a page that doesn't work and I need help with a transfer.",
+      "searchH": "Find your ride from here",
+      "destH2": "Or start from a city",
+      "popH2": "Popular routes",
+      "art": "A Ruta Shuttle van with a flat front tire on an Andes road, and a puzzled driver scratching his head next to a warning triangle"
+    },
+    "cityAlt": {
+      "cuenca": "Blue-tiled domes of the New Cathedral in Cuenca",
+      "quito": "Independence Monument in Plaza Grande, Quito's historic center",
+      "guayaquil": "Malecón 2000 and its Ferris wheel on the Guayas River in Guayaquil"
+    }
+  },
+  "es": {
+    "locale": "es-EC",
+    "nav": {
+      "home": "Inicio",
+      "vehicles": "Vehículos",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "skip": "Saltar al contenido",
+    "openMenu": "Abrir menú",
+    "brandHome": "Inicio de Ruta Shuttle",
+    "langGroup": "Elegir idioma",
+    "search": {
+      "heading": "Encuentra tu traslado",
+      "headingHub": "Traslados desde {city}",
+      "aria": "Busca tu traslado",
+      "from": "Desde",
+      "to": "Hasta",
+      "date": "Fecha",
+      "pax": "Pasajeros",
+      "submit": "Ver precios",
+      "addr": "Hotel o dirección exacta (opcional)",
+      "addrPh": "Ej.: Hotel Santa Lucía, calle Presidente Borrero…",
+      "datePh": "Elige una fecha",
+      "pax1": "pasajero",
+      "paxN": "pasajeros",
+      "paxMore": "Más de 40",
+      "later": "La fecha, el número de pasajeros y la dirección exacta de recogida los ingresas al momento de reservar."
+    },
+    "trust": [
+      "Solo tu grupo en el vehículo",
+      "Precio por vehículo, acordado antes",
+      "Cancelación gratis hasta 24 h antes",
+      "Atención en inglés y español"
+    ],
+    "fromLabel": "Desde",
+    "fleet": {
+      "eyebrow": "Vehículos",
+      "h2": "Un vehículo para cada tamaño de grupo",
+      "lede": "Las tarifas son por vehículo, no por persona. Al reservar, el calendario muestra cada opción para tu ruta con su precio exacto.",
+      "unit": "pasajeros",
+      "items": [
+        {
+          "k": "sedan",
+          "name": "Sedán",
+          "pax": "1 a 3",
+          "note": "Parejas y viajeros con poco equipaje, cómodo en la ciudad"
+        },
+        {
+          "k": "suv",
+          "name": "SUV",
+          "pax": "1 a 3",
+          "note": "Más espacio para maletas y más altura para carreteras de montaña"
+        },
+        {
+          "k": "van",
+          "name": "Van",
+          "pax": "4 a 6",
+          "note": "Familias y grupos pequeños"
+        },
+        {
+          "k": "bigvan",
+          "name": "Van grande",
+          "pax": "7 a 10",
+          "note": "Grupos con bastante equipaje"
+        },
+        {
+          "k": "bus",
+          "name": "Minibús o bus",
+          "pax": "11 a 40",
+          "note": "Grupos de turismo, bodas y eventos"
+        }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Cómo funciona",
+      "h2": "Reserva en minutos, te recogemos en la puerta",
+      "items": [
+        [
+          "Elige tu ruta",
+          "Escoge desde dónde sales y a dónde vas. Ves el precio inicial al instante."
+        ],
+        [
+          "Elige fecha y vehículo",
+          "El calendario de reservas muestra todos los vehículos para tu grupo. Un pequeño depósito asegura tu viaje."
+        ],
+        [
+          "Conoce a tu chofer",
+          "Te enviamos el nombre y el teléfono del chofer por WhatsApp. En los aeropuertos te espera en llegadas con un letrero con tu nombre."
+        ]
+      ]
+    },
+    "included": {
+      "eyebrow": "Cada viaje incluye",
+      "h2": "Los detalles que hacen fácil un viaje largo",
+      "h2Route": "Qué incluye",
+      "items": [
+        "Vehículo privado y asegurado",
+        "Recogida y entrega en tu puerta",
+        "Ayuda con tu equipaje",
+        "Aire acondicionado y asientos limpios",
+        "Paradas para café, baño y fotos cuando las pidas",
+        "Tiempo de espera gratis en llegadas del aeropuerto"
+      ]
+    },
+    "faqGeneral": [
+      [
+        "¿Es un traslado privado o compartido?",
+        "Siempre privado. Solo tu grupo va en el vehículo y salimos cuando estés listo."
+      ],
+      [
+        "¿El precio es por persona?",
+        "No, el precio es por vehículo. Una pareja y una familia de seis pagan una sola tarifa según el tamaño del vehículo."
+      ],
+      [
+        "¿Cómo pago?",
+        "Reservas en línea a través de WeTravel con cualquier tarjeta principal. Un pequeño depósito asegura el viaje, y el saldo lo pagas en línea hasta 24 horas antes o en efectivo al chofer."
+      ],
+      [
+        "¿Cuál es la política de cancelación?",
+        "Cancela gratis hasta 24 horas antes de la recogida. Las comisiones de la tarjeta pueden no ser reembolsables."
+      ],
+      [
+        "¿Qué pasa si mi vuelo se retrasa?",
+        "Envíanos tu número de vuelo y lo seguimos. El chofer ajusta la hora de recogida, sin costo extra por retrasos normales."
+      ],
+      [
+        "¿Los choferes hablan inglés?",
+        "Nuestros choferes hablan español, y nuestro equipo te atiende en inglés por WhatsApp antes y durante el viaje. Si quieres un guía de habla inglesa a bordo, pídenos una cotización."
+      ],
+      [
+        "¿Pueden hacer el viaje en sentido contrario?",
+        "Sí. Todas las rutas funcionan en ambos sentidos con la misma tarifa."
+      ],
+      [
+        "¿En qué ciudades y aeropuertos trabajan?",
+        "Te recogemos en Quito, Cuenca y Guayaquil, incluidos los aeropuertos Mariscal Sucre, Mariscal Lamar y José Joaquín de Olmedo. Desde ahí te llevamos a la costa, a la Sierra y a lugares como Baños, Montañita, Puerto López, Mindo y Vilcabamba. Para cualquier otra ruta en Ecuador, escríbenos por WhatsApp y te enviamos una cotización."
+      ],
+      [
+        "¿Cuánto cuesta un traslado privado?",
+        "Los precios son por vehículo, en dólares, y empiezan en $20 el transfer al aeropuerto de Cuenca, $25 en Guayaquil y $35 en Quito. Los viajes largos empiezan en $125 de Cuenca a Guayaquil y $135 de Guayaquil a Montañita. Cada ruta muestra su precio desde."
+      ],
+      [
+        "¿Cuántas personas caben en un vehículo?",
+        "Un sedán o una SUV llevan de 1 a 3 pasajeros, una van de 4 a 6, una van grande de 7 a 10, y un minibús o bus de 11 a 40. Eliges el tamaño en el calendario de reserva y ves el precio exacto antes de pagar."
+      ],
+      [
+        "¿Cómo reservo un traslado?",
+        "Abre tu ruta, pulsa Reservar y elige fecha, pasajeros y vehículo en el calendario de WeTravel, donde también escribes la dirección de recogida. Si tu ruta no aparece, escríbenos por WhatsApp y te cotizamos."
+      ],
+      [
+        "¿Quién opera Ruta Shuttle?",
+        "Ruta Shuttle es el nombre comercial de Ruta del Spondylus Rutsponsa S.A., empresa ecuatoriana de transporte turístico fundada en 2017 y registrada en Puerto López, Manabí. Llevamos viajeros por todo el país, de la costa a los Andes."
+      ]
+    ],
+    "contact": {
+      "eyebrow": "Contacto",
+      "h2": "¿Tienes preguntas antes de reservar?",
+      "lede": "WhatsApp es la forma más rápida de contactarnos. Respondemos en inglés y español.",
+      "chat": "Escríbenos por WhatsApp",
+      "waHello": "¡Hola Ruta Shuttle! Tengo una pregunta sobre un traslado.",
+      "email": "Correo",
+      "name": "Nombre",
+      "phone": "WhatsApp o teléfono",
+      "date": "Fecha de viaje",
+      "trip": "Tu viaje",
+      "tripPh": "Desde dónde hasta dónde, cuántas personas, paradas que quieras…",
+      "send": "Enviar mensaje"
+    },
+    "footer": {
+      "logoAlt": "Ruta Shuttle, compañía de transporte turístico",
+      "tag": "Transporte turístico privado en todo Ecuador.",
+      "destinations": "Destinos",
+      "popular": "Rutas populares",
+      "contact": "Contacto",
+      "form": "Formulario de contacto",
+      "legal": "Ruta Shuttle es un nombre comercial registrado.",
+      "pin": "Escríbenos",
+      "pinAria": "Escríbenos por WhatsApp",
+      "address": "Domicilio",
+      "follow": "Síguenos en Instagram",
+      "ruc": "RUC"
+    },
+    "dialog": {
+      "eyebrow": "Reserva tu traslado",
+      "close": "Cerrar",
+      "note": "Precio por vehículo. Cancelación gratis hasta 24 horas antes de la recogida."
+    },
+    "home": {
+      "title": "Transportes Ecuador y traslados privados | Ruta Shuttle",
+      "desc": "Transporte privado en Ecuador: transfers al aeropuerto y viajes puerta a puerta desde Quito, Cuenca y Guayaquil. Mira los precios y reserva en línea.",
+      "eyebrow": "Traslados privados en todo Ecuador",
+      "h1": "Transportes Ecuador, puerta a puerta",
+      "lede": "Viajes privados entre aeropuertos, ciudades y playas con choferes locales que conocen cada curva del camino. Elige tu ruta, mira el precio y reserva en pocos minutos.",
+      "destEyebrow": "Destinos",
+      "destH2": "¿Dónde empieza tu viaje?",
+      "destLede": "Ofrecemos transporte en Ecuador desde tres bases. Cada una tiene sus transfers al aeropuerto, paseos de un día y viajes largos a la costa o a los Andes.",
+      "routesFrom": "{n} rutas desde ${min}",
+      "seeAll": "Ver todas",
+      "popEyebrow": "Rutas populares",
+      "popH2": "Los viajes que más reservan los viajeros",
+      "aboutEyebrow": "Nosotros",
+      "aboutH2": "Choferes locales, de los Andes a la costa",
+      "aboutP1": "Ruta Shuttle es el nombre comercial de {legal}, empresa ecuatoriana de transporte turístico fundada en 2017 en Puerto López, en la costa de Manabí. Hoy llevamos a viajeros, familias y grupos por todo el Ecuador, entre aeropuertos, pueblos de montaña, playas y la entrada a la Amazonía.",
+      "aboutP2": "Contratar un chofer en Ecuador debería ser sencillo. Sabes el precio antes de salir, recibes los datos del chofer por WhatsApp y alguien de nuestro equipo está a un mensaje durante todo el viaje.",
+      "reviewsEyebrow": "Reseñas",
+      "reviewsH2": "Lo que dicen los viajeros",
+      "reviewsPh": "Vista previa: aquí van tus reseñas reales de Google o TripAdvisor. En el sitio real esta sección queda oculta hasta que las agreguemos.",
+      "faqEyebrow": "Preguntas frecuentes",
+      "faqH2": "Lo que conviene saber antes de viajar",
+      "heroAlt": "Flota y choferes de Ruta Shuttle frente a un volcán nevado en los Andes ecuatorianos"
+    },
+    "hub": {
+      "title": "{kw} y traslados privados | Ruta Shuttle",
+      "desc": "{lede} Mira los precios y reserva en línea tu traslado privado desde {city}.",
+      "eyebrow": "{city}, Ecuador",
+      "routes": "Rutas",
+      "routesVal": "{n} desde ${min}",
+      "allEyebrow": "Todas las rutas desde {city}",
+      "allH2": "Traslados privados desde {city}",
+      "allLede": "Todas las rutas funcionan en ambos sentidos con la misma tarifa. Los precios son por vehículo hasta 3 pasajeros; los grupos más grandes ven su tarifa al reservar.",
+      "notListed": "¿Vas a un lugar que no está en la lista?",
+      "notListedLink": "Escríbenos por WhatsApp",
+      "notListedTail": "y te enviamos un precio.",
+      "waNotListed": "¡Hola Ruta Shuttle! Necesito un traslado desde {city} hasta ",
+      "localEyebrow": "Datos locales",
+      "localH2": "Lo que conviene saber de {city}",
+      "faqEyebrow": "Preguntas frecuentes",
+      "faqH2": "Preguntas sobre el transporte en {city}",
+      "otherEyebrow": "Otros destinos",
+      "otherH2": "¿Empiezas en otro lugar?",
+      "seeRoutes": "Ver rutas"
+    },
+    "route": {
+      "title": "{kw} | Traslado privado | Ruta Shuttle",
+      "desc": "{blurb} Privado, puerta a puerta, desde ${price} por vehículo.",
+      "eyebrow": "Traslado privado",
+      "factFrom": "Desde",
+      "factTo": "Hasta",
+      "factTime": "Tiempo de viaje",
+      "approx": ", aprox.",
+      "factElev": "Altura",
+      "elevVal": "{a} a {b}",
+      "intro1": "{blurb} Tu chofer te recoge en tu hotel, Airbnb o el aeropuerto y te lleva directo a tu puerta en {to}.",
+      "intro2": "Sin terminales, sin transbordos y sin esperar a otros pasajeros. Para por un café, el baño o fotos cuando quieras, y sal a la hora que te convenga.",
+      "profileH2": "La subida y la bajada",
+      "profileNote": "Altura a lo largo de la carretera, en metros.",
+      "profileAria": "Altura a lo largo de la ruta, desde {a} a {ae} hasta {b} a {be}",
+      "bookAria": "Reserva este traslado",
+      "fromPerVehicle": "Desde, por vehículo",
+      "bookList": [
+        "Sedán o SUV hasta 3 pasajeros",
+        "Vans y buses más grandes al reservar",
+        "Cancelación gratis hasta 24 h antes"
+      ],
+      "waBook": "¡Hola Ruta Shuttle! Quiero reservar {title}.",
+      "askWA": "Pregunta por WhatsApp",
+      "reverse": "¿Vas en sentido contrario?",
+      "faqDurQ": "¿Cuánto dura el viaje de {a} a {b}?",
+      "faqDurA": "Calcula {dur} en traslado privado. El clima y el tráfico pueden cambiarlo un poco, y las paradas suman tiempo.",
+      "faqEyebrow": "Preguntas frecuentes",
+      "faqH2": "Preguntas sobre {title}",
+      "moreEyebrow": "Más desde {city}",
+      "moreH2": "Otros traslados desde {city}",
+      "allBtn": "Todos los traslados desde {city}"
+    },
+    "js": {
+      "choosePickup": "Elige el origen",
+      "chooseDest": "Elige el destino",
+      "chooseFirst": "Primero elige el origen",
+      "other": "Otro lugar (consúltanos)",
+      "groups": {
+        "airport": "Aeropuertos",
+        "city": "Ciudades",
+        "town": "Pueblos y Andes",
+        "beach": "Costa y playas",
+        "park": "Parques",
+        "service": "Servicios locales"
+      },
+      "pax1": "pasajero",
+      "paxN": "pasajeros",
+      "vehicle": [
+        "Sedán o SUV (hasta 3)",
+        "Van (4 a 6)",
+        "Van grande (7 a 10)",
+        "Minibús o bus (11 a 40)",
+        "Varios vehículos, consúltanos"
+      ],
+      "private": "Traslado privado",
+      "book": "Reservar",
+      "details": "Ver la ruta",
+      "from": "Desde",
+      "reverse": "Esta ruta funciona en ambos sentidos con la misma tarifa. En la reserva, elige tu fecha y agrega tu punto de recogida.",
+      "priceNote": "Los precios son por vehículo, no por persona. Eliges el vehículo y ves la tarifa exacta en el siguiente paso. ¿Preguntas?",
+      "askWA": "Escríbenos por WhatsApp",
+      "quotePill": "Cotización",
+      "quoteH": "Igual te llevamos",
+      "quoteP": "Este viaje aún no está en nuestra lista, pero recorremos todo el Ecuador. Envíanos los datos y te respondemos con un precio, normalmente en menos de una hora.",
+      "quoteWA": "Cotizar por WhatsApp",
+      "useForm": "Usar el formulario",
+      "waHi": "¡Hola Ruta Shuttle! Quiero un traslado privado desde {from} hasta {to}",
+      "waOn": " el {date}",
+      "waFor": " para {pax}",
+      "waAddr": " Dirección de recogida o destino: {addr}.",
+      "waOther": "un destino que no está en la lista",
+      "chipAddr": "Recogida o destino: {addr}",
+      "bookWA": "Reservar por WhatsApp",
+      "previewWidget": "El calendario de WeTravel y las opciones de vehículo se abren aquí en el sitio real.",
+      "previewWidget2": "Esta vista previa no puede cargar scripts externos, así que el widget solo aparece cuando el sitio está en rutashuttle.com.",
+      "openBooking": "Abrir la página de reserva",
+      "continueP": "Elige tu fecha y vehículo en nuestra página de reservas segura.",
+      "continue": "Continuar con la reserva",
+      "soon": "La reserva en línea para esta ruta se abre pronto. Escríbenos y confirmamos tu viaje por WhatsApp.",
+      "wtText": "Reservar",
+      "formMissing": "Por favor agrega tu {fields} para poder responderte.",
+      "fields": {
+        "name": "nombre",
+        "email": "correo",
+        "message": "detalle del viaje"
+      },
+      "formPreview": "Solo vista previa: en el sitio real este mensaje llega directo a tu correo.",
+      "formSetup": "Estamos configurando el formulario. Por ahora escríbenos por WhatsApp.",
+      "sending": "Enviando…",
+      "sent": "¡Gracias! Recibimos tu mensaje y te responderemos pronto.",
+      "fail": "No se pudo enviar. Intenta de nuevo o escríbenos por WhatsApp.",
+      "subject": "Nueva consulta de Ruta Shuttle (ES)",
+      "dp": {
+        "prev": "Mes anterior",
+        "next": "Mes siguiente",
+        "dialog": "Elige una fecha",
+        "today": "Hoy",
+        "clear": "Borrar"
+      },
+      "wtTitle": "Elige la fecha de salida",
+      "wtSlow": "El calendario está tardando en cargar. También puedes reservar en nuestra página segura de WeTravel."
+    },
+    "e404": {
+      "title": "Página no encontrada | Ruta Shuttle",
+      "desc": "Esta página no existe. Encuentra tu traslado privado en Ecuador desde Quito, Cuenca o Guayaquil.",
+      "eyebrow": "Error 404",
+      "h1": "Se nos pinchó una llanta",
+      "p1": "La página que buscabas tomó un desvío o ya no existe. Tranquilo, nuestro chofer ya está en eso.",
+      "p2": "Mientras cambia la llanta, elige una nueva ruta aquí abajo o escríbenos. Igual te llevamos a donde vas.",
+      "home": "Volver al inicio",
+      "wa": "Escríbenos por WhatsApp",
+      "waText": "¡Hola Ruta Shuttle! Llegué a una página que no funciona y necesito ayuda con un traslado.",
+      "searchH": "Encuentra tu traslado desde aquí",
+      "destH2": "O empieza desde una ciudad",
+      "popH2": "Rutas populares",
+      "art": "Una van de Ruta Shuttle con la llanta delantera pinchada en una carretera andina, y el chofer rascándose la cabeza junto al triángulo de emergencia"
+    },
+    "cityAlt": {
+      "cuenca": "Cúpulas azules de la Catedral Nueva de Cuenca",
+      "quito": "Monumento a la Independencia en la Plaza Grande, centro histórico de Quito",
+      "guayaquil": "Malecón 2000 y su rueda moscovita junto al río Guayas en Guayaquil"
+    }
+  }
+}

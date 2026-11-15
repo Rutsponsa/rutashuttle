@@ -1,0 +1,373 @@
+[
+  {
+    "slug": "cuenca-airport-transfer",
+    "hub": "cuenca",
+    "from": "cuenca-airport",
+    "to": "cuenca",
+    "title": "Cuenca Airport Transfer",
+    "keyword": "Cuenca Airport Transfer",
+    "price": 20,
+    "duration": "15 min",
+    "km": 3,
+    "blurb": "Your driver waits at arrivals at Mariscal Lamar and drops you at your hotel door in the historic center.",
+    "bookLink": "https://tri.ps/WAtsP",
+    "featured": true,
+    "wetravelUuid": "55978519"
+  },
+  {
+    "slug": "cuenca-to-guayaquil",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "guayaquil",
+    "title": "Cuenca to Guayaquil",
+    "keyword": "Cuenca to Guayaquil Transportation",
+    "price": 125,
+    "duration": "3.5 to 4 h",
+    "km": 195,
+    "blurb": "Over the Cajas highlands and down to the coast, to Guayaquil Airport, your hotel or the port.",
+    "wetravelUuid": "57669217",
+    "bookLink": "https://tri.ps/dCyLa",
+    "featured": true,
+    "profile": [
+      [
+        "Cuenca",
+        2560,
+        0
+      ],
+      [
+        "Cajas lagoons",
+        3900,
+        30
+      ],
+      [
+        "Tres Cruces pass",
+        4160,
+        42
+      ],
+      [
+        "Molleturo",
+        2600,
+        70
+      ],
+      [
+        "Puerto Inca",
+        80,
+        130
+      ],
+      [
+        "Guayaquil",
+        4,
+        195
+      ]
+    ]
+  },
+  {
+    "slug": "cuenca-to-banos",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "banos",
+    "title": "Cuenca to Baños",
+    "keyword": "Cuenca to Baños Transfer",
+    "price": 210,
+    "duration": "6 to 6.5 h",
+    "blurb": "North through the Andes to Ecuador's adventure capital, with waterfalls and hot springs at the end of the road.",
+    "bookLink": "https://tri.ps/hkNps",
+    "featured": true
+  },
+  {
+    "slug": "cuenca-to-puerto-lopez",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "puerto-lopez",
+    "title": "Cuenca to Puerto López",
+    "keyword": "Cuenca to Puerto López Transfer",
+    "price": 280,
+    "duration": "6.5 to 7 h",
+    "blurb": "From the mountains to the whale-watching coast, the gateway to Isla de la Plata.",
+    "bookLink": "https://tri.ps/frHJw"
+  },
+  {
+    "slug": "cuenca-to-vilcabamba",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "vilcabamba",
+    "title": "Cuenca to Vilcabamba",
+    "keyword": "Cuenca to Vilcabamba Transfer",
+    "price": 150,
+    "duration": "4.5 h",
+    "blurb": "South to the Valley of Longevity, a quiet town with a soft climate and green hills all around.",
+    "bookLink": "https://tri.ps/OrfRo"
+  },
+  {
+    "slug": "cuenca-to-alausi",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "alausi",
+    "title": "Cuenca to Alausí",
+    "keyword": "Cuenca to Alausí Transfer",
+    "price": 125,
+    "duration": "3 to 3.5 h",
+    "blurb": "Arrive in time for the Devil's Nose train, riding through high Andean farmland.",
+    "bookLink": "https://tri.ps/jAMUV"
+  },
+  {
+    "slug": "cuenca-to-salinas",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "salinas",
+    "title": "Cuenca to Salinas",
+    "keyword": "Cuenca to Salinas Transfer",
+    "price": 180,
+    "duration": "5 to 5.5 h",
+    "blurb": "Andes to the beach in one ride, straight to your resort on the Santa Elena peninsula.",
+    "bookLink": "https://tri.ps/pRAUY"
+  },
+  {
+    "slug": "cuenca-to-montanita",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "montanita",
+    "title": "Cuenca to Montañita",
+    "keyword": "Cuenca to Montañita Transfer",
+    "price": 240,
+    "duration": "5.5 to 6 h",
+    "blurb": "Head for Ecuador's surf town without bus changes in Guayaquil.",
+    "bookLink": "https://tri.ps/bXKMf"
+  },
+  {
+    "slug": "cuenca-to-quito",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "quito",
+    "title": "Cuenca to Quito",
+    "keyword": "Cuenca to Quito Transfer",
+    "price": 290,
+    "duration": "8 to 9 h",
+    "blurb": "The long way north along the Avenue of the Volcanoes, with stops whenever you want them.",
+    "bookLink": "https://tri.ps/PrhKC"
+  },
+  {
+    "slug": "cuenca-to-riobamba",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "riobamba",
+    "title": "Cuenca to Riobamba",
+    "keyword": "Cuenca to Riobamba Transfer",
+    "price": 180,
+    "duration": "4.5 h",
+    "blurb": "Valleys and snowcapped peaks on the way to the foot of Chimborazo.",
+    "bookLink": "https://tri.ps/VgNgR"
+  },
+  {
+    "slug": "cuenca-to-loja",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "loja",
+    "title": "Cuenca to Loja",
+    "keyword": "Cuenca to Loja Transfer",
+    "price": 130,
+    "duration": "4 h",
+    "blurb": "A calm ride through the southern highlands and small villages.",
+    "bookLink": "https://tri.ps/JNmeO"
+  },
+  {
+    "slug": "cuenca-to-manta",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "manta",
+    "title": "Cuenca to Manta",
+    "keyword": "Cuenca to Manta Transfer",
+    "price": 270,
+    "duration": "7 h",
+    "blurb": "Andes to the Pacific port city, door to door in one day."
+  },
+  {
+    "slug": "cuenca-to-piedra-de-agua",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "piedra-de-agua",
+    "title": "Piedra de Agua Hot Springs",
+    "keyword": "Transfer to Piedra de Agua",
+    "price": 20,
+    "duration": "20 min",
+    "blurb": "A short ride to the thermal pools of Baños de Cuenca.",
+    "bookLink": "https://tri.ps/errvu"
+  },
+  {
+    "slug": "cuenca-dinner-transfer",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "cuenca-restaurants",
+    "title": "Hotel to Restaurants",
+    "keyword": "Cuenca Dinner Transfer",
+    "price": 20,
+    "duration": "Round trip",
+    "blurb": "Go out for dinner and get back to your hotel safely, no taxi hunting at night.",
+    "bookLink": "https://tri.ps/zVHZJ"
+  },
+  {
+    "slug": "cuenca-private-driver",
+    "hub": "cuenca",
+    "from": "cuenca",
+    "to": "cuenca-hourly",
+    "title": "Hire a Driver by the Hour",
+    "keyword": "Private Driver in Cuenca",
+    "price": 20,
+    "duration": "Per hour",
+    "blurb": "A car and driver at your disposal for errands, day trips or your own route.",
+    "bookLink": "https://tri.ps/vpOSp",
+    "featured": true
+  },
+  {
+    "slug": "guayaquil-airport-transfer",
+    "hub": "guayaquil",
+    "from": "guayaquil-airport",
+    "to": "guayaquil",
+    "title": "Guayaquil Airport Transfer",
+    "keyword": "Guayaquil Airport Transportation",
+    "price": 25,
+    "duration": "20 to 30 min",
+    "blurb": "Met at arrivals at José Joaquín de Olmedo and driven to your hotel or the port.",
+    "bookLink": "https://tri.ps/woWeB",
+    "featured": true
+  },
+  {
+    "slug": "guayaquil-to-cuenca",
+    "hub": "guayaquil",
+    "from": "guayaquil",
+    "to": "cuenca",
+    "title": "Guayaquil to Cuenca",
+    "keyword": "Transportation from Guayaquil to Cuenca",
+    "price": 120,
+    "duration": "3.5 to 4 h",
+    "km": 195,
+    "blurb": "Straight from the airport up through Cajas National Park to your door in Cuenca.",
+    "bookLink": "https://tri.ps/lJGYt",
+    "featured": true
+  },
+  {
+    "slug": "guayaquil-to-montanita",
+    "hub": "guayaquil",
+    "from": "guayaquil",
+    "to": "montanita",
+    "title": "Guayaquil to Montañita",
+    "keyword": "Guayaquil to Montañita Transfer",
+    "price": 135,
+    "duration": "2.5 to 3 h",
+    "blurb": "Land in Guayaquil and be at the surf town by sunset."
+  },
+  {
+    "slug": "guayaquil-to-puerto-lopez",
+    "hub": "guayaquil",
+    "from": "guayaquil",
+    "to": "puerto-lopez",
+    "title": "Guayaquil to Puerto López",
+    "keyword": "Guayaquil to Puerto López Transfer",
+    "price": 180,
+    "duration": "3.5 to 4 h",
+    "blurb": "Up the coast to Puerto López, the base for Isla de la Plata and whale season."
+  },
+  {
+    "slug": "guayaquil-to-salinas",
+    "hub": "guayaquil",
+    "from": "guayaquil",
+    "to": "salinas",
+    "title": "Guayaquil to Salinas",
+    "keyword": "Guayaquil to Salinas Transfer",
+    "price": 135,
+    "duration": "2 to 2.5 h",
+    "blurb": "The quickest way from the city to Salinas beach.",
+    "bookLink": "https://tri.ps/HJwjY"
+  },
+  {
+    "slug": "guayaquil-to-manta",
+    "hub": "guayaquil",
+    "from": "guayaquil",
+    "to": "manta",
+    "title": "Guayaquil to Manta",
+    "keyword": "Guayaquil to Manta Transfer",
+    "price": 180,
+    "duration": "3.5 to 4 h",
+    "blurb": "A comfortable coastal drive north to Manta."
+  },
+  {
+    "slug": "quito-airport-transfer",
+    "hub": "quito",
+    "from": "quito-airport",
+    "to": "quito",
+    "title": "Quito Airport Transfer",
+    "keyword": "Quito Airport Shuttle",
+    "price": 35,
+    "duration": "45 to 60 min",
+    "blurb": "Met at arrivals in Tababela and driven up to your hotel in Quito, day or night.",
+    "bookLink": "https://tri.ps/tntmi",
+    "featured": true
+  },
+  {
+    "slug": "quito-to-mindo",
+    "hub": "quito",
+    "from": "quito",
+    "to": "mindo",
+    "title": "Quito to Mindo",
+    "keyword": "Quito to Mindo Transfer",
+    "price": 120,
+    "duration": "2 h",
+    "blurb": "Down into the cloud forest, home of hummingbirds and waterfalls."
+  },
+  {
+    "slug": "quito-to-tena",
+    "hub": "quito",
+    "from": "quito",
+    "to": "tena",
+    "title": "Quito to Tena",
+    "keyword": "Quito to Tena Transfer",
+    "price": 160,
+    "duration": "3.5 to 4 h",
+    "blurb": "Over the eastern Andes to the gateway of the Amazon."
+  },
+  {
+    "slug": "quito-to-cotopaxi",
+    "hub": "quito",
+    "from": "quito",
+    "to": "cotopaxi",
+    "title": "Quito to Cotopaxi",
+    "keyword": "Quito to Cotopaxi Transfer",
+    "price": 110,
+    "duration": "1.5 to 2 h",
+    "blurb": "A direct ride to Cotopaxi National Park or your hacienda nearby."
+  },
+  {
+    "slug": "quito-to-banos",
+    "hub": "quito",
+    "from": "quito",
+    "to": "banos",
+    "title": "Quito to Baños",
+    "keyword": "Quito to Baños Transfer",
+    "price": 140,
+    "duration": "3.5 h",
+    "blurb": "South to Baños, with a Cotopaxi stop if you ask for it.",
+    "featured": true
+  },
+  {
+    "slug": "quito-to-papallacta",
+    "hub": "quito",
+    "from": "quito",
+    "to": "papallacta",
+    "title": "Quito to Papallacta",
+    "keyword": "Quito to Papallacta Transfer",
+    "price": 110,
+    "duration": "1.5 h",
+    "blurb": "Up to the hot springs at 3,300 m for a long soak."
+  },
+  {
+    "slug": "quito-to-riobamba",
+    "hub": "quito",
+    "from": "quito",
+    "to": "riobamba",
+    "title": "Quito to Riobamba",
+    "keyword": "Quito to Riobamba Transfer",
+    "price": 150,
+    "duration": "3.5 to 4 h",
+    "blurb": "Along the Avenue of the Volcanoes to the city beneath Chimborazo."
+  }
+]

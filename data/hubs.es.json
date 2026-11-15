@@ -1,0 +1,141 @@
+{
+  "cuenca": {
+    "keyword": "Transporte en Cuenca",
+    "h1": "Transporte en Cuenca y traslados privados",
+    "lede": "Recogidas en el aeropuerto, viajes a la costa y choferes por horas, todo privado y puerta a puerta.",
+    "airport": "Aeropuerto Mariscal Lamar (CUE)",
+    "elev": "2.560 m",
+    "facts": [
+      [
+        "Aeropuerto",
+        "Mariscal Lamar (CUE), a 3 km del centro histórico"
+      ],
+      [
+        "Altura de la ciudad",
+        "2.560 m sobre el nivel del mar"
+      ],
+      [
+        "Lo más reservado",
+        "Cuenca a Guayaquil, 3,5 a 4 horas"
+      ]
+    ],
+    "local": [
+      [
+        "Aeropuerto pequeño, viaje corto",
+        "El Mariscal Lamar está dentro de la ciudad. La mayoría de hoteles del centro quedan a 10 o 15 minutos, y tu chofer te espera en la salida de llegadas con un letrero con tu nombre."
+      ],
+      [
+        "El camino a la costa cruza el Cajas",
+        "Para ir a Guayaquil, Salinas o Montañita se sube a más de 4.000 m en Tres Cruces antes de bajar al nivel del mar. Lleva una chaqueta ligera y avisa al chofer si te mareas en las curvas."
+      ],
+      [
+        "Las paradas son parte del viaje",
+        "¿Quieres unos minutos en las lagunas del Cajas o almorzar en el camino? Pídelo al reservar o díselo al chofer ese día."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Qué tan lejos está el aeropuerto de Cuenca del centro histórico?",
+        "Unos 3 km. El viaje suele tomar 10 a 15 minutos, un poco más en hora pico."
+      ],
+      [
+        "¿Me pueden recoger en un Airbnb y no en un hotel?",
+        "Sí. Escribe la dirección exacta al reservar y te recogemos en la puerta."
+      ],
+      [
+        "¿Van directo al aeropuerto de Guayaquil?",
+        "Sí. La mayoría de nuestros viajes de Cuenca a Guayaquil terminan en el aeropuerto. Danos la hora de tu vuelo y planificamos la salida para que llegues con tiempo de sobra."
+      ],
+      [
+        "¿Es seguro el camino por el Cajas?",
+        "Es una carretera asfaltada que nuestros choferes recorren cada semana. Puede haber neblina, así que salimos con tiempo y nunca vamos apurados."
+      ]
+    ]
+  },
+  "guayaquil": {
+    "keyword": "Transporte en Guayaquil",
+    "h1": "Transporte en Guayaquil y transfers al aeropuerto",
+    "lede": "Desde el aeropuerto José Joaquín de Olmedo a las playas, a los Andes o a tu hotel en el centro.",
+    "airport": "Aeropuerto José Joaquín de Olmedo (GYE)",
+    "elev": "4 m",
+    "facts": [
+      [
+        "Aeropuerto",
+        "José Joaquín de Olmedo (GYE), junto a la ciudad"
+      ],
+      [
+        "Altura de la ciudad",
+        "4 m sobre el nivel del mar"
+      ],
+      [
+        "Lo más reservado",
+        "Guayaquil a Cuenca, 3,5 a 4 horas"
+      ]
+    ],
+    "local": [
+      [
+        "Te recibimos en llegadas",
+        "Tu chofer te espera en la salida de llegadas con un letrero con tu nombre, así te ahorras la fila del taxi."
+      ],
+      [
+        "Las playas están cerca",
+        "Salinas queda a unas 2 horas y Montañita a menos de 3, así que puedes aterrizar en la mañana y estar en la arena a la hora del almuerzo."
+      ],
+      [
+        "Subida a los Andes",
+        "El viaje a Cuenca sube del nivel del mar a más de 4.000 m. Tómalo con calma tu primer día en la altura."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Siguen mi vuelo?",
+        "Envíanos tu número de vuelo al reservar y ajustamos la recogida si llega antes o después."
+      ],
+      [
+        "¿Nos pueden llevar del aeropuerto directo a Cuenca?",
+        "Sí, es nuestro viaje más popular. El chofer te recibe en llegadas y suben directo por el Cajas."
+      ]
+    ]
+  },
+  "quito": {
+    "keyword": "Transporte en Quito",
+    "h1": "Transporte en Quito y transfer al aeropuerto",
+    "lede": "Traslados privados desde el aeropuerto Mariscal Sucre y viajes a Cotopaxi, Mindo, Papallacta y más.",
+    "airport": "Aeropuerto Mariscal Sucre (UIO)",
+    "elev": "2.850 m",
+    "facts": [
+      [
+        "Aeropuerto",
+        "Mariscal Sucre (UIO), en Tababela, a 45 o 60 min de la ciudad"
+      ],
+      [
+        "Altura de la ciudad",
+        "2.850 m sobre el nivel del mar"
+      ],
+      [
+        "Lo más reservado",
+        "Aeropuerto de Quito a la ciudad"
+      ]
+    ],
+    "local": [
+      [
+        "El aeropuerto está lejos",
+        "El aeropuerto de Quito está en Tababela, al este de la ciudad. Un traslado reservado te ahorra negociar un taxi de madrugada después de un vuelo largo."
+      ],
+      [
+        "Volcanes por todas partes",
+        "Cotopaxi, Papallacta y Mindo están a un día de viaje, y podemos dejarte en una hacienda o lodge en el camino."
+      ]
+    ],
+    "faq": [
+      [
+        "¿Cuánto toma el viaje del aeropuerto de Quito al Centro Histórico?",
+        "Normalmente 45 a 60 minutos, más en la hora pico de la tarde."
+      ],
+      [
+        "¿Pueden parar en el Cotopaxi camino a Baños?",
+        "Sí. Avísanos al reservar y planificamos el tiempo extra."
+      ]
+    ]
+  }
+}

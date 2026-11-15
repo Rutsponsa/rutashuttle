@@ -1,0 +1,201 @@
+{
+  "cuenca": {
+    "name": "Cuenca",
+    "label": "Cuenca (hotel or Airbnb)",
+    "kind": "city",
+    "elev": 2560,
+    "hub": "cuenca",
+    "nameEs": "Cuenca",
+    "labelEs": "Cuenca (hotel o Airbnb)"
+  },
+  "cuenca-airport": {
+    "name": "Cuenca Airport",
+    "label": "Cuenca Airport (CUE)",
+    "kind": "airport",
+    "code": "CUE",
+    "elev": 2530,
+    "hub": "cuenca",
+    "nameEs": "Aeropuerto de Cuenca",
+    "labelEs": "Aeropuerto de Cuenca (CUE)"
+  },
+  "guayaquil": {
+    "name": "Guayaquil",
+    "label": "Guayaquil (hotel or port)",
+    "kind": "city",
+    "elev": 4,
+    "hub": "guayaquil",
+    "nameEs": "Guayaquil",
+    "labelEs": "Guayaquil (hotel o puerto)"
+  },
+  "guayaquil-airport": {
+    "name": "Guayaquil Airport",
+    "label": "Guayaquil Airport (GYE)",
+    "kind": "airport",
+    "code": "GYE",
+    "elev": 5,
+    "hub": "guayaquil",
+    "nameEs": "Aeropuerto de Guayaquil",
+    "labelEs": "Aeropuerto de Guayaquil (GYE)"
+  },
+  "quito": {
+    "name": "Quito",
+    "label": "Quito (city or hotel)",
+    "kind": "city",
+    "elev": 2850,
+    "hub": "quito",
+    "nameEs": "Quito",
+    "labelEs": "Quito (ciudad u hotel)"
+  },
+  "quito-airport": {
+    "name": "Quito Airport",
+    "label": "Quito Airport (UIO)",
+    "kind": "airport",
+    "code": "UIO",
+    "elev": 2400,
+    "hub": "quito",
+    "nameEs": "Aeropuerto de Quito",
+    "labelEs": "Aeropuerto de Quito (UIO)"
+  },
+  "banos": {
+    "name": "Baños",
+    "label": "Baños de Agua Santa",
+    "kind": "town",
+    "elev": 1820,
+    "nameEs": "Baños",
+    "labelEs": "Baños de Agua Santa"
+  },
+  "puerto-lopez": {
+    "name": "Puerto López",
+    "label": "Puerto López",
+    "kind": "beach",
+    "elev": 5,
+    "nameEs": "Puerto López",
+    "labelEs": "Puerto López"
+  },
+  "vilcabamba": {
+    "name": "Vilcabamba",
+    "label": "Vilcabamba",
+    "kind": "town",
+    "elev": 1560,
+    "nameEs": "Vilcabamba",
+    "labelEs": "Vilcabamba"
+  },
+  "alausi": {
+    "name": "Alausí",
+    "label": "Alausí (Devil's Nose train)",
+    "kind": "town",
+    "elev": 2340,
+    "nameEs": "Alausí",
+    "labelEs": "Alausí (tren Nariz del Diablo)"
+  },
+  "salinas": {
+    "name": "Salinas",
+    "label": "Salinas",
+    "kind": "beach",
+    "elev": 5,
+    "nameEs": "Salinas",
+    "labelEs": "Salinas"
+  },
+  "montanita": {
+    "name": "Montañita",
+    "label": "Montañita",
+    "kind": "beach",
+    "elev": 5,
+    "nameEs": "Montañita",
+    "labelEs": "Montañita"
+  },
+  "riobamba": {
+    "name": "Riobamba",
+    "label": "Riobamba",
+    "kind": "town",
+    "elev": 2750,
+    "nameEs": "Riobamba",
+    "labelEs": "Riobamba"
+  },
+  "loja": {
+    "name": "Loja",
+    "label": "Loja",
+    "kind": "town",
+    "elev": 2060,
+    "nameEs": "Loja",
+    "labelEs": "Loja"
+  },
+  "manta": {
+    "name": "Manta",
+    "label": "Manta",
+    "kind": "beach",
+    "elev": 5,
+    "nameEs": "Manta",
+    "labelEs": "Manta"
+  },
+  "piedra-de-agua": {
+    "name": "Piedra de Agua",
+    "label": "Piedra de Agua hot springs",
+    "kind": "service",
+    "elev": 2600,
+    "nameEs": "Piedra de Agua",
+    "labelEs": "Termas Piedra de Agua"
+  },
+  "cuenca-restaurants": {
+    "name": "Cuenca restaurants",
+    "label": "Dinner out in Cuenca (round trip)",
+    "kind": "service",
+    "elev": 2560,
+    "nameEs": "Restaurantes en Cuenca",
+    "labelEs": "Cena en Cuenca (ida y vuelta)"
+  },
+  "cuenca-hourly": {
+    "name": "Driver by the hour",
+    "label": "Hire a driver by the hour (Cuenca)",
+    "kind": "service",
+    "elev": 2560,
+    "nameEs": "Chofer por horas",
+    "labelEs": "Chofer por horas (Cuenca)"
+  },
+  "mindo": {
+    "name": "Mindo",
+    "label": "Mindo cloud forest",
+    "kind": "town",
+    "elev": 1250,
+    "nameEs": "Mindo",
+    "labelEs": "Bosque nublado de Mindo"
+  },
+  "tena": {
+    "name": "Tena",
+    "label": "Tena (Amazon)",
+    "kind": "town",
+    "elev": 510,
+    "nameEs": "Tena",
+    "labelEs": "Tena (Amazonía)"
+  },
+  "cotopaxi": {
+    "name": "Cotopaxi",
+    "label": "Cotopaxi National Park",
+    "kind": "park",
+    "elev": 3800,
+    "nameEs": "Cotopaxi",
+    "labelEs": "Parque Nacional Cotopaxi"
+  },
+  "papallacta": {
+    "name": "Papallacta",
+    "label": "Papallacta hot springs",
+    "kind": "town",
+    "elev": 3300,
+    "nameEs": "Papallacta",
+    "labelEs": "Termas de Papallacta"
+  },
+  "cajas": {
+    "name": "Cajas National Park",
+    "label": "Cajas National Park",
+    "kind": "park",
+    "elev": 3900,
+    "nameEs": "Parque Nacional Cajas",
+    "labelEs": "Parque Nacional Cajas",
+    "quoteFrom": [
+      "cuenca",
+      "cuenca-airport",
+      "guayaquil",
+      "guayaquil-airport"
+    ]
+  }
+}

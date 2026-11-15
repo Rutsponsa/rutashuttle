@@ -1,0 +1,32 @@
+{
+  "cuenca-airport-transfer": { "slug": "transfer-aeropuerto-cuenca", "title": "Transfer Aeropuerto de Cuenca", "keyword": "Transfer aeropuerto Cuenca", "blurb": "Tu chofer te espera en la salida de llegadas del Mariscal Lamar y te deja en la puerta de tu hotel en el centro histórico." },
+  "cuenca-to-guayaquil": { "slug": "cuenca-a-guayaquil", "title": "Cuenca a Guayaquil", "keyword": "Transporte de Cuenca a Guayaquil", "blurb": "Cruzando el páramo del Cajas y bajando a la costa, hasta el aeropuerto de Guayaquil, tu hotel o el puerto." },
+  "cuenca-to-banos": { "slug": "cuenca-a-banos", "title": "Cuenca a Baños", "keyword": "Transporte de Cuenca a Baños", "blurb": "Hacia el norte por los Andes hasta la capital de la aventura, con cascadas y aguas termales al final del camino." },
+  "cuenca-to-puerto-lopez": { "slug": "cuenca-a-puerto-lopez", "title": "Cuenca a Puerto López", "keyword": "Transporte de Cuenca a Puerto López", "blurb": "De la sierra a la costa de las ballenas, la puerta de entrada a Isla de la Plata." },
+  "cuenca-to-vilcabamba": { "slug": "cuenca-a-vilcabamba", "title": "Cuenca a Vilcabamba", "keyword": "Transporte de Cuenca a Vilcabamba", "blurb": "Al sur, al Valle de la Longevidad, un pueblo tranquilo de clima suave rodeado de colinas verdes." },
+  "cuenca-to-alausi": { "slug": "cuenca-a-alausi", "title": "Cuenca a Alausí", "keyword": "Transporte de Cuenca a Alausí", "blurb": "Llega a tiempo para el tren de la Nariz del Diablo, entre campos andinos de altura." },
+  "cuenca-to-salinas": { "slug": "cuenca-a-salinas", "title": "Cuenca a Salinas", "keyword": "Transporte de Cuenca a Salinas", "blurb": "De los Andes a la playa en un solo viaje, directo a tu hotel en la península de Santa Elena." },
+  "cuenca-to-montanita": { "slug": "cuenca-a-montanita", "title": "Cuenca a Montañita", "keyword": "Transporte de Cuenca a Montañita", "blurb": "Rumbo al pueblo surfista del Ecuador sin cambiar de bus en Guayaquil." },
+  "cuenca-to-quito": { "slug": "cuenca-a-quito", "title": "Cuenca a Quito", "keyword": "Transporte de Cuenca a Quito", "blurb": "El camino largo hacia el norte por la Avenida de los Volcanes, con paradas cuando tú quieras." },
+  "cuenca-to-riobamba": { "slug": "cuenca-a-riobamba", "title": "Cuenca a Riobamba", "keyword": "Transporte de Cuenca a Riobamba", "blurb": "Valles y nevados en el camino a la ciudad al pie del Chimborazo." },
+  "cuenca-to-loja": { "slug": "cuenca-a-loja", "title": "Cuenca a Loja", "keyword": "Transporte de Cuenca a Loja", "blurb": "Un viaje tranquilo por la sierra sur y sus pueblos pequeños." },
+  "cuenca-to-manta": { "slug": "cuenca-a-manta", "title": "Cuenca a Manta", "keyword": "Transporte de Cuenca a Manta", "blurb": "De los Andes al puerto del Pacífico, puerta a puerta en un solo día." },
+  "cuenca-to-piedra-de-agua": { "slug": "transporte-piedra-de-agua", "title": "Termas Piedra de Agua", "keyword": "Transporte a Piedra de Agua", "blurb": "Un viaje corto a las piscinas termales de Baños de Cuenca." },
+  "cuenca-dinner-transfer": { "slug": "traslado-restaurantes-cuenca", "title": "Hotel a restaurantes", "keyword": "Traslado a restaurantes en Cuenca", "blurb": "Sal a cenar y regresa seguro a tu hotel, sin buscar taxi en la noche." },
+  "cuenca-private-driver": { "slug": "chofer-privado-cuenca", "title": "Chofer por horas", "keyword": "Chofer privado en Cuenca", "blurb": "Un auto con chofer a tu disposición para trámites, paseos o tu propia ruta." },
+
+  "guayaquil-airport-transfer": { "slug": "transfer-aeropuerto-guayaquil", "title": "Transfer Aeropuerto de Guayaquil", "keyword": "Transfer aeropuerto Guayaquil", "blurb": "Te recibimos en llegadas del José Joaquín de Olmedo y te llevamos a tu hotel o al puerto." },
+  "guayaquil-to-cuenca": { "slug": "guayaquil-a-cuenca", "title": "Guayaquil a Cuenca", "keyword": "Transporte de Guayaquil a Cuenca", "blurb": "Directo desde el aeropuerto, subiendo por el Parque Nacional Cajas hasta tu puerta en Cuenca." },
+  "guayaquil-to-montanita": { "slug": "guayaquil-a-montanita", "title": "Guayaquil a Montañita", "keyword": "Transporte de Guayaquil a Montañita", "blurb": "Aterriza en Guayaquil y llega al pueblo surfista antes del atardecer." },
+  "guayaquil-to-puerto-lopez": { "slug": "guayaquil-a-puerto-lopez", "title": "Guayaquil a Puerto López", "keyword": "Transporte de Guayaquil a Puerto López", "blurb": "Por la costa hasta Puerto López, base para Isla de la Plata y la temporada de ballenas." },
+  "guayaquil-to-salinas": { "slug": "guayaquil-a-salinas", "title": "Guayaquil a Salinas", "keyword": "Transporte de Guayaquil a Salinas", "blurb": "La forma más rápida de ir de la ciudad a la playa de Salinas." },
+  "guayaquil-to-manta": { "slug": "guayaquil-a-manta", "title": "Guayaquil a Manta", "keyword": "Transporte de Guayaquil a Manta", "blurb": "Un viaje cómodo por la costa hacia el norte, hasta Manta." },
+
+  "quito-airport-transfer": { "slug": "transfer-aeropuerto-quito", "title": "Transfer Aeropuerto de Quito", "keyword": "Transfer aeropuerto Quito", "blurb": "Te recibimos en llegadas en Tababela y te llevamos a tu hotel en Quito, de día o de noche." },
+  "quito-to-mindo": { "slug": "quito-a-mindo", "title": "Quito a Mindo", "keyword": "Transporte de Quito a Mindo", "blurb": "Bajando al bosque nublado, hogar de colibríes y cascadas." },
+  "quito-to-tena": { "slug": "quito-a-tena", "title": "Quito a Tena", "keyword": "Transporte de Quito a Tena", "blurb": "Cruzando los Andes orientales hasta la puerta de la Amazonía." },
+  "quito-to-cotopaxi": { "slug": "quito-a-cotopaxi", "title": "Quito a Cotopaxi", "keyword": "Transporte de Quito a Cotopaxi", "blurb": "Un viaje directo al Parque Nacional Cotopaxi o a tu hacienda cercana." },
+  "quito-to-banos": { "slug": "quito-a-banos", "title": "Quito a Baños", "keyword": "Transporte de Quito a Baños", "blurb": "Hacia el sur hasta Baños, con parada en el Cotopaxi si la pides." },
+  "quito-to-papallacta": { "slug": "quito-a-papallacta", "title": "Quito a Papallacta", "keyword": "Transporte de Quito a Papallacta", "blurb": "Sube a las termas a 3.300 m para un baño largo y caliente." },
+  "quito-to-riobamba": { "slug": "quito-a-riobamba", "title": "Quito a Riobamba", "keyword": "Transporte de Quito a Riobamba", "blurb": "Por la Avenida de los Volcanes hasta la ciudad al pie del Chimborazo." }
+}

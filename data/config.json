@@ -1,0 +1,28 @@
+{
+  "brand": "Ruta Shuttle",
+  "legalName": "Ruta del Spondylus Rutsponsa S.A.",
+  "domain": "https://rutashuttle.com",
+  "whatsapp": "593987796896",
+  "whatsappDisplay": "+593 98 779 6896",
+  "whatsappPending": true,
+  "email": "info@rutashuttle.com",
+  "wetravelUid": "631609",
+  "wetravelColor": "33ae3f",
+  "web3formsKey": "9737c177-7a74-45c9-b196-b8abe42f782a",
+  "reviews": [],
+  "wetravelWidget": "calendar",
+  "foundingDate": "2017-06-01",
+  "taxID": "1391854234001",
+  "address": {
+    "street": "González Suárez y San Alejo",
+    "locality": "Puerto López",
+    "region": "Manabí",
+    "country": "EC",
+    "display": "González Suárez y San Alejo, Puerto López, Manabí, Ecuador"
+  },
+  "sameAs": [
+    "https://www.instagram.com/ruta_shuttle_transporte/",
+    "https://share.google/A0EHPP8gxKz271082"
+  ],
+  "instagram": "https://www.instagram.com/ruta_shuttle_transporte/"
+}
